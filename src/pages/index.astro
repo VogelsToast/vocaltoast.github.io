@@ -1,11 +1,70 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allPosts = await getCollection('blog');
+const featuredPosts = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
 ---
+<BaseLayout>
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-headline">Thoughts on<br /><em>Growth,</em><br />Marketing<br />& Product.</h1>
+      <p class="hero-sub">Head of Marketing → Product. Writing about ecosystem marketing, creator strategies, and what actually drives growth at SaaS startups.</p>
+      <div class="hero-actions">
+        <a href="/blog" class="btn-primary">Read the writing →</a>
+        <a href="/about" class="btn-secondary">About me</a>
+      </div>
+    </div>
+  </section>
 
-<Layout>
-	<Welcome />
-</Layout>
+  {featuredPosts.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-title">Latest Writing</span>
+          <a href="/blog" class="section-link">View all →</a>
+        </div>
+        <div class="post-grid">
+          {featuredPosts.map((post) => (
+            <a href={`/blog/${post.id}`} class="post-card">
+              <div class="post-card-meta">
+                <span class="tag">{post.data.tags?.[0] || 'Growth'}</span>
+                <span>{formatDate(post.data.pubDate)}</span>
+              </div>
+              <h2 class="post-card-title">{post.data.title}</h2>
+              <p class="post-card-excerpt">{post.data.description}</p>
+              <span class="post-card-read">Read more →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="about-strip">
+    <div class="container">
+      <div class="about-inner">
+        <div>
+          <p class="about-label">About</p>
+          <h2 class="about-name">Zac<br />Culpan</h2>
+        </div>
+        <div>
+          <p class="about-text">I've spent my career at the intersection of marketing and product — figuring out what makes growth stick. Currently Head of Marketing at <strong>Narrative</strong>, moving to Head of Product at <strong>OneRoof (NZME)</strong>.</p>
+          <p class="about-text">On the side, I'm building a startup focused on ecosystem and creator marketing — helping companies grow through communities, partnerships, and creator-led channels.</p>
+          <div class="about-roles">
+            <span class="role-badge">Ecosystem Marketing</span>
+            <span class="role-badge">Creator Marketing</span>
+            <span class="role-badge">SaaS Growth</span>
+            <span class="role-badge">Product Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
