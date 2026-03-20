@@ -8,35 +8,42 @@ const featuredPosts = allPosts
   .slice(0, 3);
 
 function formatDate(date: Date) {
-  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 }
 ---
+
 <BaseLayout>
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1 class="hero-headline">Thoughts on<br /><em>Growth,</em><br />Marketing<br />& Product.</h1>
-      <p class="hero-sub">Head of Marketing → Product. Writing about ecosystem marketing, creator strategies, and what actually drives growth at SaaS startups.</p>
+      <h1 class="hero-headline">
+        Thoughts on<br /><em>Growth,</em><br />Marketing<br />& Product.
+      </h1>
+      <p class="hero-sub">
+        Head of Marketing → Product. Writing about ecosystem marketing, creator strategies, and what actually drives growth at SaaS startups.
+      </p>
       <div class="hero-actions">
         <a href={`${import.meta.env.BASE_URL}blog`} class="btn-primary">Read the writing →</a>
-<a href={`${import.meta.env.BASE_URL}about`} class="btn-secondary">About me</a>
-
-<a href={`${import.meta.env.BASE_URL}blog`} class="section-link">View all →</a>
-
-<a href={`${import.meta.env.BASE_URL}blog/${post.id}`} class="post-card">
+        <a href={`${import.meta.env.BASE_URL}about`} class="btn-secondary">About me</a>
       </div>
     </div>
   </section>
 
+  <!-- Latest Writing -->
   {featuredPosts.length > 0 && (
     <section class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-title">Latest Writing</span>
-          <a href="/blog" class="section-link">View all →</a>
+          <a href={`${import.meta.env.BASE_URL}blog`} class="section-link">View all →</a>
         </div>
         <div class="post-grid">
           {featuredPosts.map((post) => (
-            <a href={`/blog/${post.id}`} class="post-card">
+            <a href={`${import.meta.env.BASE_URL}blog/${post.id}`} class="post-card">
               <div class="post-card-meta">
                 <span class="tag">{post.data.tags?.[0] || 'Growth'}</span>
                 <span>{formatDate(post.data.pubDate)}</span>
@@ -51,6 +58,7 @@ function formatDate(date: Date) {
     </section>
   )}
 
+  <!-- About Strip -->
   <section class="about-strip">
     <div class="container">
       <div class="about-inner">
@@ -59,8 +67,12 @@ function formatDate(date: Date) {
           <h2 class="about-name">Zac<br />Culpan</h2>
         </div>
         <div>
-          <p class="about-text">I've spent my career at the intersection of marketing and product — figuring out what makes growth stick. Currently Head of Marketing at <strong>Narrative</strong>, moving to Head of Product at <strong>OneRoof (NZME)</strong>.</p>
-          <p class="about-text">On the side, I'm building a startup focused on ecosystem and creator marketing — helping companies grow through communities, partnerships, and creator-led channels.</p>
+          <p class="about-text">
+            I've spent my career at the intersection of marketing and product — figuring out what makes growth stick. Currently Head of Marketing at <strong>Narrative</strong>, moving to Head of Product at <strong>OneRoof (NZME)</strong>.
+          </p>
+          <p class="about-text">
+            On the side, I'm building a startup focused on ecosystem and creator marketing — helping companies grow through communities, partnerships, and creator-led channels rather than paid acquisition alone.
+          </p>
           <div class="about-roles">
             <span class="role-badge">Ecosystem Marketing</span>
             <span class="role-badge">Creator Marketing</span>
