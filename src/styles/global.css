@@ -112,3 +112,4 @@ footer { border-top: 1px solid var(--gray-200); padding: 2.5rem 0; }
   .nav-links { gap: 1rem; }
   .hero { padding: 3rem 0; }
 }
+.about-headshot { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center top; display: block; margin-bottom: 1.5rem; filter: grayscale(100%); }
