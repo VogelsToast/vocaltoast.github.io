@@ -58,13 +58,12 @@ const blogSchema = type === "article" ? {
 <body>
   <nav>
     <div class="container">
-      <div class="nav-inner">
-        <a href="/" class="nav-logo">Zac Culpan</a>
-        <ul class="nav-links">
-          <li><a href="/blog">Writing</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </div>
+      <!-- Nav logo -->
+<a href={import.meta.env.BASE_URL} class="nav-logo">Zac Culpan</a>
+
+<!-- Nav links (both in nav AND footer) -->
+<li><a href={`${import.meta.env.BASE_URL}blog`}>Writing</a></li>
+<li><a href={`${import.meta.env.BASE_URL}about`}>About</a></li>
     </div>
   </nav>
   <main><slot /></main>

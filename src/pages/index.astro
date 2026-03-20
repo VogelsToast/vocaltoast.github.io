@@ -17,8 +17,12 @@ function formatDate(date: Date) {
       <h1 class="hero-headline">Thoughts on<br /><em>Growth,</em><br />Marketing<br />& Product.</h1>
       <p class="hero-sub">Head of Marketing → Product. Writing about ecosystem marketing, creator strategies, and what actually drives growth at SaaS startups.</p>
       <div class="hero-actions">
-        <a href="/blog" class="btn-primary">Read the writing →</a>
-        <a href="/about" class="btn-secondary">About me</a>
+        <a href={`${import.meta.env.BASE_URL}blog`} class="btn-primary">Read the writing →</a>
+<a href={`${import.meta.env.BASE_URL}about`} class="btn-secondary">About me</a>
+
+<a href={`${import.meta.env.BASE_URL}blog`} class="section-link">View all →</a>
+
+<a href={`${import.meta.env.BASE_URL}blog/${post.id}`} class="post-card">
       </div>
     </div>
   </section>
