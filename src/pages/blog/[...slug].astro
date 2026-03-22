@@ -39,5 +39,26 @@ function formatDate(date: Date) {
     <article class="post-content">
       <Content />
     </article>
+    <div class="post-end">
+      <p class="post-end-eyebrow">What next</p>
+      <h2 class="post-end-heading">Found this useful?</h2>
+      <p class="post-end-text">
+        I write about ecosystem marketing, creator-led channels, and the thinking behind SaaS growth that actually sticks. If this sparked ideas, I'd love to connect.
+      </p>
+      <div class="post-end-actions">
+        <a
+          href="https://www.linkedin.com/in/zachary-culpan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+          aria-label="Connect on LinkedIn (opens in new tab)"
+        >
+          Connect on LinkedIn <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a href={`${import.meta.env.BASE_URL}blog`} class="post-back-link">
+          <span aria-hidden="true">←</span> All writing
+        </a>
+      </div>
+    </div>
   </div>
 </BaseLayout>

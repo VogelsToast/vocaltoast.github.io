@@ -5,7 +5,9 @@ import { getCollection } from 'astro:content';
 const allPosts = await getCollection('blog');
 const featuredPosts = allPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
+  .slice(0, 4);
+
+const [featured, ...rest] = featuredPosts;
 
 function formatDate(date: Date) {
   return date.toLocaleDateString('en-US', {
@@ -24,36 +26,51 @@ function formatDate(date: Date) {
         Thoughts on<br /><em>Growth,</em><br />Marketing<br />& Product.
       </h1>
       <p class="hero-sub">
-        Head of Marketing → Product. Writing about ecosystem marketing, creator strategies, and what actually drives growth at SaaS startups.
+        Most growth strategies are borrowed from companies that look nothing like yours. I write about what actually works — ecosystem marketing, creator-led channels, and the thinking behind growth that compounds.
       </p>
       <div class="hero-actions">
-        <a href={`${import.meta.env.BASE_URL}blog`} class="btn-primary">Read the writing →</a>
-        <a href={`${import.meta.env.BASE_URL}about`} class="btn-secondary">About me</a>
+        <a href={`${import.meta.env.BASE_URL}blog`} class="btn-primary">Start reading <span class="arrow" aria-hidden="true">→</span></a>
+        <a href={`${import.meta.env.BASE_URL}about`} class="btn-secondary">About Zac</a>
       </div>
     </div>
   </section>
 
-  <!-- Latest Writing -->
+  <!-- Writing -->
   {featuredPosts.length > 0 && (
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-title">Latest Writing</span>
-          <a href={`${import.meta.env.BASE_URL}blog`} class="section-link">View all →</a>
+          <span class="section-title">Writing</span>
+          <a href={`${import.meta.env.BASE_URL}blog`} class="section-link">All essays <span class="arrow" aria-hidden="true">→</span></a>
         </div>
-        <div class="post-grid">
-          {featuredPosts.map((post) => (
-            <a href={`${import.meta.env.BASE_URL}blog/${post.id}`} class="post-card">
-              <div class="post-card-meta">
-                <span class="tag">{post.data.tags?.[0] || 'Growth'}</span>
-                <span>{formatDate(post.data.pubDate)}</span>
-              </div>
-              <h2 class="post-card-title">{post.data.title}</h2>
-              <p class="post-card-excerpt">{post.data.description}</p>
-              <span class="post-card-read">Read more →</span>
-            </a>
-          ))}
-        </div>
+
+        <!-- Featured post -->
+        {featured && (
+          <a href={`${import.meta.env.BASE_URL}blog/${featured.id}`} class="post-featured">
+            <div class="post-featured-meta">
+              <span class="tag">{featured.data.tags?.[0] || 'Growth'}</span>
+              <span>{formatDate(featured.data.pubDate)}</span>
+            </div>
+            <h2 class="post-featured-title">{featured.data.title}</h2>
+            <p class="post-featured-excerpt">{featured.data.description}</p>
+            <span class="post-featured-cta">Read this essay <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        )}
+
+        <!-- Secondary posts -->
+        {rest.length > 0 && (
+          <div class="post-mini-list">
+            {rest.map((post) => (
+              <a href={`${import.meta.env.BASE_URL}blog/${post.id}`} class="post-mini">
+                <div class="post-mini-date">{formatDate(post.data.pubDate)}</div>
+                <div>
+                  <span class="post-mini-tag">{post.data.tags?.[0] || 'Growth'}</span>
+                  <h3 class="post-mini-title">{post.data.title}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )}
@@ -63,9 +80,14 @@ function formatDate(date: Date) {
     <div class="container">
       <div class="about-inner">
         <div>
-          <img src={`${import.meta.env.BASE_URL}zac-headshot-final.jpg`} alt="Zac Culpan" class="about-headshot" width="120" height="120" />
-          <p class="about-label">About</p>
-          <h2 class="about-name">Zac<br />Culpan</h2>
+          <img
+            src={`${import.meta.env.BASE_URL}zac-headshot-final.jpg`}
+            alt="Zac Culpan"
+            class="about-headshot"
+            width="140"
+            height="140"
+          />
+          <h2 class="about-name">Zac Culpan</h2>
         </div>
         <div>
           <p class="about-text">
