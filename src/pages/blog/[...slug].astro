@@ -23,6 +23,7 @@ function formatDate(date: Date) {
   type="article"
   pubDate={post.data.pubDate.toISOString()}
   tags={post.data.tags}
+  image={`/og/${post.id}.png`}
 >
   <div class="container">
     <div class="post-header">
