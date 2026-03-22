@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="480" fill="#fafafa" rx="8"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a1a">Partner Programme vs Ecosystem Marketing</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#666">Same word. Very different strategy.</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="75" width="345" height="36" rx="6" fill="#e0e0e0"/>
+  <text x="212" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#666">Partner Programme</text>
+
+  <rect x="415" y="75" width="345" height="36" rx="6" fill="#1a1a1a"/>
+  <text x="587" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Ecosystem Marketing</text>
+
+  <!-- Row 1: Relationship -->
+  <text x="40" y="140" font-size="10" font-weight="600" fill="#999" letter-spacing="1">RELATIONSHIP</text>
+
+  <rect x="40" y="148" width="345" height="32" rx="4" fill="#f5f5f5"/>
+  <text x="212" y="169" text-anchor="middle" font-size="11" fill="#888">Contractual. Defined terms and obligations.</text>
+
+  <rect x="415" y="148" width="345" height="32" rx="4" fill="#f0f0f0"/>
+  <text x="587" y="169" text-anchor="middle" font-size="11" fill="#1a1a1a">Relational. Built on trust over time.</text>
+
+  <!-- Row 2: Measurement -->
+  <text x="40" y="210" font-size="10" font-weight="600" fill="#999" letter-spacing="1">MEASUREMENT</text>
+
+  <rect x="40" y="218" width="345" height="32" rx="4" fill="#f5f5f5"/>
+  <text x="212" y="239" text-anchor="middle" font-size="11" fill="#888">Affiliate codes, UTMs, lead attribution.</text>
+
+  <rect x="415" y="218" width="345" height="32" rx="4" fill="#f0f0f0"/>
+  <text x="587" y="239" text-anchor="middle" font-size="11" fill="#1a1a1a">HDYHAU, blended CAC, qualitative signals.</text>
+
+  <!-- Row 3: Timeline -->
+  <text x="40" y="280" font-size="10" font-weight="600" fill="#999" letter-spacing="1">TIMELINE</text>
+
+  <rect x="40" y="288" width="345" height="32" rx="4" fill="#f5f5f5"/>
+  <text x="212" y="309" text-anchor="middle" font-size="11" fill="#888">Immediate. Results visible from day one.</text>
+
+  <rect x="415" y="288" width="345" height="32" rx="4" fill="#f0f0f0"/>
+  <text x="587" y="309" text-anchor="middle" font-size="11" fill="#1a1a1a">Compounding. Returns grow over months.</text>
+
+  <!-- Row 4: Starting point -->
+  <text x="40" y="350" font-size="10" font-weight="600" fill="#999" letter-spacing="1">STARTING POINT</text>
+
+  <rect x="40" y="358" width="345" height="32" rx="4" fill="#f5f5f5"/>
+  <text x="212" y="379" text-anchor="middle" font-size="11" fill="#888">Your product. "Who can we integrate with?"</text>
+
+  <rect x="415" y="358" width="345" height="32" rx="4" fill="#f0f0f0"/>
+  <text x="587" y="379" text-anchor="middle" font-size="11" fill="#1a1a1a">Your customer. "What's their world like?"</text>
+
+  <!-- Row 5: Defensibility -->
+  <text x="40" y="420" font-size="10" font-weight="600" fill="#999" letter-spacing="1">DEFENSIBILITY</text>
+
+  <rect x="40" y="428" width="345" height="32" rx="4" fill="#f5f5f5"/>
+  <text x="212" y="449" text-anchor="middle" font-size="11" fill="#888">Low. A competitor can outbid you.</text>
+
+  <rect x="415" y="428" width="345" height="32" rx="4" fill="#f0f0f0"/>
+  <text x="587" y="449" text-anchor="middle" font-size="11" fill="#1a1a1a">High. You can't outbid trust.</text>
+</svg>
