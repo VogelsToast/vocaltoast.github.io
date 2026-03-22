@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="600" fill="#fafafa" rx="8"/>
+
+  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a1a">The Ecosystem Model</text>
+  <text x="400" y="60" text-anchor="middle" font-size="12" fill="#666">Your brand at the centre, surrounded by the people and places your customers trust</text>
+
+  <!-- Connection lines -->
+  <line x1="400" y1="300" x2="400" y2="130" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="400" y1="300" x2="560" y2="180" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="400" y1="300" x2="620" y2="340" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="400" y1="300" x2="520" y2="480" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="400" y1="300" x2="280" y2="480" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="400" y1="300" x2="180" y2="340" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="400" y1="300" x2="240" y2="180" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Cross connections between outer nodes (ecosystem interconnections) -->
+  <line x1="400" y1="130" x2="560" y2="180" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="560" y1="180" x2="620" y2="340" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="620" y1="340" x2="520" y2="480" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="520" y1="480" x2="280" y2="480" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="280" y1="480" x2="180" y2="340" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="180" y1="340" x2="240" y2="180" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="240" y1="180" x2="400" y2="130" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="3,4"/>
+
+  <!-- Centre node: Your Brand -->
+  <circle cx="400" cy="300" r="55" fill="#1a1a1a"/>
+  <text x="400" y="295" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Your</text>
+  <text x="400" y="312" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Brand</text>
+
+  <!-- Outer nodes -->
+  <!-- Creators -->
+  <circle cx="400" cy="130" r="40" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="400" y="127" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Creators &amp;</text>
+  <text x="400" y="141" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Educators</text>
+
+  <!-- Industry Events -->
+  <circle cx="560" cy="180" r="40" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="560" y="177" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Industry</text>
+  <text x="560" y="191" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Events</text>
+
+  <!-- Complementary Tools -->
+  <circle cx="620" cy="340" r="40" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="620" y="334" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Partner</text>
+  <text x="620" y="348" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Products</text>
+
+  <!-- Ambassadors -->
+  <circle cx="520" cy="480" r="40" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="520" y="477" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Brand</text>
+  <text x="520" y="491" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Ambassadors</text>
+
+  <!-- Community -->
+  <circle cx="280" cy="480" r="40" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="280" y="477" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Community</text>
+  <text x="280" y="491" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Groups</text>
+
+  <!-- Publications -->
+  <circle cx="180" cy="340" r="40" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="180" y="334" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Industry</text>
+  <text x="180" y="348" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Media</text>
+
+  <!-- Customers -->
+  <circle cx="240" cy="180" r="40" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="240" y="177" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Your</text>
+  <text x="240" y="191" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">Customers</text>
+
+  <!-- Annotation -->
+  <text x="400" y="565" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Every node reinforces the others. That's what makes it a moat.</text>
+</svg>

@@ -21,6 +21,8 @@ Partner marketing is transactional. You have a formal agreement, maybe revenue s
 
 Ecosystem marketing is about your entire network within your niche. The relationships you build with the people, companies, communities, educators and creators that orbit the same customers you serve. And the critical difference is that it's not transactional, it's relational. You invest in your ecosystem, you show up, you're visible, you're active, and you build trust over time. The returns compound, but you can't shortcut the process with a contract and a commission structure.
 
+![The ecosystem model: your brand at the centre, surrounded by creators, events, partners, ambassadors, community, media, and customers](/blog-images/ecosystem-hub-spoke.svg)
+
 Emily Kramer at MKT1 has a useful framework where she maps growth into six engines, and ecosystem is one of them alongside inbound, outbound, product virality, events, and community. What I'd add to her thinking is that for a SaaS company in a niche market, ecosystem isn't just one engine among six. It's the engine that makes all the others work better. It touches awareness, trust, conversion and retention all at once, and it creates a compounding advantage that paid channels simply can't replicate.
 
 ## Why we had to find a different path
@@ -78,6 +80,8 @@ The result was that when we got back to New Zealand and needed to collaborate wi
 Each event, each community gathering, each ambassador relationship doesn't just deliver a one-time result. It builds on everything that came before. The photographer who saw our booth at one conference, then came to our photo walk at the next, then saw a few of their peers posting about Narrative on social media. By the time they hit our website, the trust is already built. The conversion is almost a formality.
 
 This compounding effect is what separates ecosystem marketing from campaign-based thinking. A campaign has a start date and an end date. An ecosystem just keeps getting stronger.
+
+![Campaign thinking vs ecosystem thinking: linear returns vs compounding returns](/blog-images/campaign-vs-ecosystem.svg)
 
 ## Measuring ecosystem marketing (honestly)
 

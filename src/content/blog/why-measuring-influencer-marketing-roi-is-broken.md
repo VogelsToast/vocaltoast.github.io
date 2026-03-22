@@ -33,6 +33,8 @@ At some point, they sign up for a free trial. They may or may not come through a
 
 The creator did 80% of the work. Your attribution model gave them 0% of the credit.
 
+![What actually happened vs what your dashboard shows](/blog-images/attribution-reality-gap.svg)
+
 ## Why HDYHAU changes everything
 
 At Narrative, the single most valuable thing we did for measurement was adding a HDYHAU field (How Did You Hear About Us) to our signup flow. It's a simple self-reported question. And it completely changed our understanding of what was driving growth.
@@ -60,6 +62,8 @@ After that first collaboration, the conversion numbers drop. And this is where a
 What they're missing is that a creator's value extends well beyond direct conversions. A creator who actually uses and loves your product becomes part of your brand ecosystem. They provide social proof. They create content that lives on YouTube or Instagram for years. They mention you in contexts that aren't tracked by any affiliate code. They build the ambient awareness and trust that makes everything else in your marketing work better.
 
 You need to assess whether a creator is right for your brand over the long haul, not just whether their second video converted as well as their first.
+
+![The first-time creator trap: affiliate conversions drop but total ecosystem value keeps growing](/blog-images/creator-value-over-time.svg)
 
 ## When content goes viral, pay attention
 

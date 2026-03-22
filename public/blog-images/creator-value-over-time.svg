@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="420" fill="#fafafa" rx="8"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a1a">The First-Time Creator Trap</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#666">Most companies only see the affiliate line. They miss the real value.</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="340" x2="740" y2="340" stroke="#ddd" stroke-width="1"/>
+  <line x1="80" y1="340" x2="80" y2="80" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Y axis label -->
+  <text x="30" y="210" text-anchor="middle" font-size="11" fill="#999" transform="rotate(-90, 30, 210)">Value</text>
+
+  <!-- X axis labels -->
+  <text x="160" y="365" text-anchor="middle" font-size="10" fill="#999">Collab 1</text>
+  <text x="300" y="365" text-anchor="middle" font-size="10" fill="#999">Collab 2</text>
+  <text x="440" y="365" text-anchor="middle" font-size="10" fill="#999">Collab 3</text>
+  <text x="580" y="365" text-anchor="middle" font-size="10" fill="#999">Collab 4</text>
+  <text x="700" y="365" text-anchor="middle" font-size="10" fill="#999">Ongoing</text>
+
+  <!-- Affiliate conversions line (what companies track) - spikes then drops -->
+  <polyline points="120,130 160,110 200,170 250,220 300,230 350,260 400,270 440,280 500,290 560,295 620,300 700,310" fill="none" stroke="#bbb" stroke-width="2.5"/>
+
+  <!-- Total ecosystem value line (what they miss) - grows steadily -->
+  <polyline points="120,240 160,220 200,200 250,185 300,170 350,155 400,142 440,130 500,118 560,108 620,100 700,88" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+
+  <!-- Shaded area between lines showing missed value -->
+  <polygon points="200,200 250,185 300,170 350,155 400,142 440,130 500,118 560,108 620,100 700,88 700,310 620,300 560,295 500,290 440,280 400,270 350,260 300,230 250,220 200,170" fill="#1a1a1a" opacity="0.06"/>
+
+  <!-- Legend -->
+  <line x1="440" y1="385" x2="470" y2="385" stroke="#bbb" stroke-width="2.5"/>
+  <text x="478" y="389" font-size="11" fill="#999">Affiliate conversions (what you track)</text>
+
+  <line x1="440" y1="403" x2="470" y2="403" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="478" y="407" font-size="11" fill="#1a1a1a">Total ecosystem value (what you miss)</text>
+
+  <!-- Annotation arrow pointing to gap -->
+  <text x="590" y="200" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">This gap</text>
+  <text x="590" y="214" text-anchor="middle" font-size="11" font-weight="500" fill="#1a1a1a">keeps growing</text>
+  <line x1="590" y1="220" x2="590" y2="260" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="586,258 594,258 590,264" fill="#1a1a1a"/>
+
+  <!-- Decision point annotation -->
+  <rect x="260" y="232" width="130" height="22" rx="4" fill="#fff" stroke="#bbb" stroke-width="1"/>
+  <text x="325" y="247" text-anchor="middle" font-size="9" fill="#888">Most companies quit here</text>
+  <line x1="300" y1="230" x2="300" y2="224" stroke="#bbb" stroke-width="1"/>
+</svg>
