@@ -22,8 +22,11 @@ function formatDate(date: Date) {
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1 class="hero-headline">
-        Thoughts on<br /><em>Growth,</em><br />Marketing<br />& Product.
+      <h1 class="hero-headline" id="hero-headline">
+        <span class="hero-line"><span class="hero-line-inner">Thoughts on</span></span>
+        <span class="hero-line"><span class="hero-line-inner"><em class="hero-em">Growth,</em></span></span>
+        <span class="hero-line"><span class="hero-line-inner">Marketing</span></span>
+        <span class="hero-line"><span class="hero-line-inner">&amp; Product.</span></span>
       </h1>
       <p class="hero-sub">
         Most growth strategies are borrowed from companies that look nothing like yours. I write about what actually works — ecosystem marketing, creator-led channels, and the thinking behind growth that compounds.
@@ -94,7 +97,7 @@ function formatDate(date: Date) {
             I've spent my career at the intersection of marketing and product — figuring out what makes growth stick. Currently Head of Marketing at <strong>Narrative</strong>, moving to Head of Product at <strong>OneRoof (NZME)</strong>.
           </p>
           <p class="about-text">
-            On the side, I'm building a startup focused on ecosystem and creator marketing — helping companies grow through communities, partnerships, and creator-led channels rather than paid acquisition alone.
+            I'm also working on something in the ecosystem marketing measurement space — the infrastructure most growth teams need but rarely have.
           </p>
           <div class="about-roles">
             <span class="role-badge">Ecosystem Marketing</span>
@@ -107,3 +110,83 @@ function formatDate(date: Date) {
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* ── Hero line reveal ────────────────────────────────────── */
+
+  .hero-line {
+    display: block;
+    overflow: hidden;
+    /* Prevent line-height gaps from clipping descenders */
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+  }
+
+  @keyframes line-up {
+    from {
+      transform: translateY(110%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .hero-line-inner {
+    display: block;
+    animation: line-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .hero-line:nth-child(1) .hero-line-inner { animation-delay: 0ms; }
+  .hero-line:nth-child(2) .hero-line-inner { animation-delay: 120ms; }
+  .hero-line:nth-child(3) .hero-line-inner { animation-delay: 240ms; }
+  .hero-line:nth-child(4) .hero-line-inner { animation-delay: 360ms; }
+
+  /* ── "Growth" underline draw-on ──────────────────────────── */
+
+  @keyframes underline-grow {
+    from { background-size: 0% 3px; }
+    to   { background-size: 100% 3px; }
+  }
+
+  .hero-em {
+    /* Remove browser italic default underline */
+    text-decoration: none;
+    /* Custom animated underline via background trick */
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% + 1px);
+    background-size: 0% 3px;
+    padding-bottom: 3px;
+    animation: underline-grow 0.55s cubic-bezier(0.22, 1, 0.36, 1) 820ms both;
+  }
+
+  /* ── Hero sub + actions fade up ──────────────────────────── */
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-sub    { animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 500ms both; }
+  .hero-actions { animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 650ms both; }
+
+  /* ── Reduced motion — skip everything, show final state ───── */
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-line-inner,
+    .hero-sub,
+    .hero-actions { animation: none; }
+    .hero-em {
+      animation: none;
+      background-size: 100% 3px;
+    }
+  }
+</style>
