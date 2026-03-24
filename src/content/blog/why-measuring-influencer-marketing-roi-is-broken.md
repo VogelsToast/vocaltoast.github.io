@@ -5,7 +5,7 @@ pubDate: "2026-03-22"
 tags: ["Influencer Marketing", "Marketing Measurement", "Creator Marketing"]
 ---
 
-I've spent the last few years working across both sides of creator marketing. At Poliigon, I worked for the influencer, helping BlenderGuru's brand figure out what content actually moved the needle for the business. At Narrative, I was the one running the creator and ambassador programme, trying to understand which partnerships were worth investing in and which were just burning budget. Both experiences taught me the same thing: the way most companies measure influencer marketing ROI is completely disconnected from how creator influence actually works.
+I've spent the last few years working across both sides of creator marketing. At Poliigon, I worked for the influencer, helping BlenderGuru's brand figure out what content actually moved the needle for the business. At Narrative, I built and led the marketing team that ran the creator and ambassador programme, trying to understand which partnerships were worth investing in and which were just burning budget. Both experiences taught me the same thing: the way most companies measure influencer marketing ROI is completely disconnected from how creator influence actually works.
 
 And the frustrating part is that the industry knows this. Ask any marketing director if they're confident in their influencer attribution and you'll get a long pause followed by something like "we're working on it." Everyone can feel that the numbers they're looking at don't tell the full story. But most teams keep tracking the same metrics because they don't have a better option.
 

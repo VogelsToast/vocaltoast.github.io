@@ -5,7 +5,7 @@ pubDate: "2026-03-23"
 tags: ["Partner Marketing", "Influencer Marketing", "SaaS Growth"]
 ---
 
-At Narrative, we ran what most people would call both partner marketing and influencer marketing. But internally, we never really thought about it that way. We thought about it in tiers: what's the relationship, what's the expectation, and what are we actually trying to achieve with this person or brand? The labels came later, usually when someone outside the company asked what we were doing.
+At Narrative, my team ran what most people would call both partner marketing and influencer marketing. But internally, we never really thought about it that way. We thought about it in tiers: what's the relationship, what's the expectation, and what are we actually trying to achieve with this person or brand? The labels came later, usually when someone outside the company asked what we were doing.
 
 The problem with the labels is that people use them interchangeably. Or they think one is a subset of the other. Or they assume influencer marketing is just partner marketing but with creators instead of companies. None of that is right, and the confusion leads to misallocated budgets and programmes that don't deliver because they were designed with the wrong model in mind.
 
@@ -37,7 +37,7 @@ A step up from ambassadors, these were photographers we'd approach for a more st
 
 With formal partners, we'd agree on a set of expectations for a defined period. Content deliverables, event appearances, that kind of thing. It was more like a traditional sponsorship in structure, but the relationship still had to feel authentic. If someone didn't actually use Narrative in their workflow, the partnership didn't happen regardless of their audience size.
 
-Here's something we learned that surprised us: these bigger formal partners didn't always drive the best results in terms of online content performance. Their YouTube videos or Instagram posts might not convert as well as content from smaller creators. But that wasn't really their purpose. They influenced in different ways. When a photographer who's won international awards and whose work is exhibited in galleries is publicly associated with your brand, that changes how the entire market perceives you. It's aspirational. It's "if they use it, it must be good."
+Here's something we learned that surprised us: these bigger formal partners didn't always drive the best results in terms of online content performance. Their YouTube videos or Instagram posts might not convert as well as content from smaller creators. But that wasn't really their purpose. They influenced in different ways. When a photographer who's building momentum in the education space, getting asked to speak at major conferences, and shooting for high-profile clients is publicly associated with your brand, that changes how the entire market perceives you. It's aspirational. It's "if they use it, it must be good."
 
 The ROI on these partnerships is hard to measure directly, and that's where a lot of companies go wrong. They evaluate formal partners with the same metrics they use for affiliate creators and then conclude the partnership "isn't working" because the affiliate numbers don't stack up. Different tier, different purpose, different measurement.
 
@@ -46,6 +46,8 @@ The ROI on these partnerships is hard to measure directly, and that's where a lo
 This was a separate track entirely. UGC creators might have smaller followings, but they could create content that performed well and cost a fraction of what the bigger formal partners cost. Some of it was brand awareness style content, some of it was educational, showing how to use the product in different workflows.
 
 The bang for buck on UGC was often better than the formal partners when you measured it purely on content performance and cost per conversion. We found that scaling lots of smaller pieces of UGC content could have a really strong cumulative impact. Each piece was cheap, each piece reached a relevant niche audience, and collectively they built a steady drumbeat of visibility.
+
+The other thing we did with UGC was feed the best-performing pieces into our paid strategy. When a creator's content took off organically, we'd turn it into an ad and compare the CPA against our best in-house creative. The creator content almost always won because it felt native rather than like an ad. So UGC wasn't just an organic play for us, it was also a creative pipeline for paid.
 
 ### Brand and marketplace partnerships
 
@@ -57,7 +59,7 @@ I think the key with brand partnerships is expectation management. They're bette
 
 ## The real difference
 
-So what's actually the difference between partner marketing and influencer marketing? After running both at Narrative, here's how I'd frame it.
+So what's actually the difference between partner marketing and influencer marketing? After building a team that ran both at Narrative, here's how I'd frame it.
 
 Partner marketing is structural. It's defined by agreements, terms, deliverables, and measurement frameworks. The value exchange is explicit. Both parties know what they're getting and what they're giving. It works well when the commercial logic is clear and both sides can track outcomes.
 

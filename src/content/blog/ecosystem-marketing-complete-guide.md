@@ -9,7 +9,7 @@ There's a conversation happening more and more in the SaaS marketing world right
 
 The companies that are actually building durable advantages, the ones where customers come to them, where partners proactively recommend them, where the brand carries real weight before a prospect ever hits the pricing page, are doing something different. They're investing in their ecosystem.
 
-I spent nearly three years as Head of Marketing at Narrative, a SaaS company that makes an AI-powered culling product for professional photographers. During that time, ecosystem marketing went from a vague idea to the single most important thing we did for brand and growth. Not because we read about it in a playbook. Because we figured out, through a lot of trial and error, that the traditional SaaS marketing channels weren't going to get us where we needed to go.
+I spent nearly three years as Head of Marketing at Narrative, a SaaS company that makes an AI-powered culling product for professional photographers. I hired and built a small marketing team there, and during that time, ecosystem marketing went from a vague idea to the single most important thing we did for brand and growth. Not because we read about it in a playbook. Because we figured out, through a lot of trial and error, that the traditional SaaS marketing channels weren't going to get us where we needed to go.
 
 ## What ecosystem marketing actually is
 
