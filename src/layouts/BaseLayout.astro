@@ -18,9 +18,15 @@ const personSchema = {
   "@type": "Person",
   "name": "Zac Culpan",
   "url": siteUrl,
-  "jobTitle": "Head of Marketing & Product",
-  "description": "Head of Marketing at Narrative, moving to Head of Product at OneRoof (NZME).",
-  "sameAs": ["https://linkedin.com/in/zacculpan"]
+  "jobTitle": "Head of Product",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "OneRoof",
+    "url": "https://www.oneroof.co.nz"
+  },
+  "description": "Marketer, product operator, and startup founder. Writing about ecosystem marketing, creator marketing, and SaaS growth.",
+  "knowsAbout": ["Ecosystem Marketing", "Creator Marketing", "SaaS Growth", "Influencer Marketing", "Product Strategy"],
+  "sameAs": ["https://www.linkedin.com/in/zachary-culpan/"]
 };
 
 const blogSchema = type === "article" ? {
@@ -29,8 +35,25 @@ const blogSchema = type === "article" ? {
   "headline": title,
   "description": description,
   "datePublished": pubDate,
-  "author": { "@type": "Person", "name": "Zac Culpan", "url": siteUrl },
+  "dateModified": pubDate,
+  "author": {
+    "@type": "Person",
+    "name": "Zac Culpan",
+    "url": siteUrl,
+    "jobTitle": "Head of Product",
+    "worksFor": { "@type": "Organization", "name": "OneRoof" }
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Zac Culpan",
+    "url": siteUrl
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL.toString()
+  },
   "url": canonicalURL.toString(),
+  "image": ogImageUrl,
   "keywords": tags?.join(", ")
 } : null;
 ---
@@ -52,6 +75,7 @@ const blogSchema = type === "article" ? {
   <meta name="description" content={description} />
   <meta name="author" content="Zac Culpan" />
   <link rel="canonical" href={canonicalURL} />
+  <link rel="alternate" type="application/rss+xml" title="Zac Culpan" href="/rss.xml" />
   <meta property="og:type" content={type === "article" ? "article" : "website"} />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
