@@ -1,7 +1,7 @@
 ---
 title: "Partner Marketing vs Influencer Marketing: The Real Difference"
 description: "Most SaaS companies lump these together or use the terms interchangeably. They're not the same thing, and understanding when to use each changes how you allocate budget."
-pubDate: "2026-03-23"
+pubDate: "2026-03-25"
 tags: ["Partner Marketing", "Influencer Marketing", "SaaS Growth"]
 ---
 
