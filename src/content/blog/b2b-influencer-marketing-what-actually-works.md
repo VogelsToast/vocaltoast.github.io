@@ -15,7 +15,7 @@ The companies I see getting results from B2B influencer marketing in 2026 aren't
 
 The most common mistake is chasing follower count. It makes intuitive sense — bigger audience, more exposure, more leads. But in B2B, reach is almost irrelevant compared to relevance.
 
-At Narrative, our best-performing creators weren't the ones with the biggest followings. They were photographers with 10,000–30,000 followers who happened to be deeply embedded in the specific community we were trying to reach. Their audiences were almost entirely professional and semi-professional photographers — exactly our target customer. When they recommended a tool, people listened, because the recommendation came from someone who actually did the same work they did.
+At Narrative, our best-performing creators weren't the ones with the biggest followings. They were photographers with 10,000–30,000 followers (sometimes smaller) who happened to be deeply embedded in the specific community we were trying to reach. Their audiences were almost entirely professional and semi-professional photographers — exactly our target customer. When they recommended a tool, people listened, because the recommendation came from someone who actually did the same work they did.
 
 Compare that to a creator with 500,000 followers. That number might look great in a report, but you have to ask why they have that audience. If their most popular content is trending audio remixes or comedy skits that went viral, their following isn't built on the expertise you need them to transfer to your brand. The audience composition is wrong, and the engagement that matters — comments and discussion around the topics relevant to your product — probably isn't there.
 
