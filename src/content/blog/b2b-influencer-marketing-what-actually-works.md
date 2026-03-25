@@ -29,13 +29,13 @@ This applies to thought leaders too, not just content creators. At Narrative, so
 
 Even when you find the right person, most B2B influencer campaigns underperform because the brief is wrong. And by wrong, I don't mean poorly written. I mean structurally misaligned.
 
-Here's a real example from a SaaS company I worked at. During a major sale month, we set up a competition for our creators and ambassadors. The structure was simple: whoever drove the most signups that month would earn triple commission, second place got double, third got 1.5x. We wanted a flood of leads coming through so we could convert them during the sale.
+Here's a real example, during a major sale month, we set up a competition for our creators and ambassadors. The structure was simple: whoever drove the most signups that month would earn triple commission, second place got double, third got 1.5x. We wanted a flood of leads coming through so we could convert them during the sale.
 
 The problem was that our creators had learned — correctly — that pushing a "sign up for free" message was what worked best with their audiences. Free is an easy sell. Their audiences responded to it. So that's what they promoted.
 
 But we needed them to talk about the sale. We were running a major discount, and the whole point of the competition was to drive revenue during that window. The creators weren't incentivised to push the sale message — they were incentivised to push the free message, because that's what got signups, and signups were what the competition measured.
 
-The result was friction. The sale messaging didn't land the way it should have. The creators felt pulled in two directions. And the campaign underperformed not because we had the wrong creators, but because we'd built an incentive structure that pulled against our actual business goal.
+The result was friction. The sale messaging didn't land the way it should have. The creators felt pulled in two directions. The campaign performed alright but could have gone so much better had we built an incentive structure that aligned with our actual business goal.
 
 ![When creator incentives and business goals point in different directions](/blog-images/misaligned-incentives.svg)
 
@@ -43,7 +43,7 @@ If we'd run it again, we'd have restructured the competition to reward paid conv
 
 And this kind of misalignment shows up in different ways depending on the business. At Poliigon, we were targeting 3D creators across multiple verticals — architects, game designers, VFX artists. The briefing challenge there was that a creator who's huge in the architectural visualisation space might have zero crossover with the game design audience, even though both use 3D assets. If you brief them broadly on "3D textures," the message doesn't land with anyone specifically. You need to match the creator's niche to the vertical you're trying to reach and brief them accordingly.
 
-At BetterSaver, the challenge was different again. We were trying to reach people at a specific life stage — young enough to benefit from switching KiwiSaver providers, engaged enough with their finances to care. The creators we worked with needed audiences that skewed toward that age and intent profile. A personal finance creator with an older, already-retired audience wasn't going to move the needle, even if their content was excellent. The brief had to account for who the creator's audience actually was, not just what the creator talked about.
+At BetterSaver, the challenge was different again. We were trying to reach people at a specific life stage — young enough to benefit from switching KiwiSaver providers, engaged enough with their finances to care. The creators we worked with needed audiences that skewed toward that age and intent profile. A personal finance creator with an older, already-retired audience wasn't going to move the needle, even if their content was excellent. The brief had to account for who the creator's audience actually was, not just what the creator talked about. And we were tight on our feedback loops there — we had HDYHAU tracking on signups, we monitored CAC across channels, and we built a pretty sophisticated process for understanding which campaigns and marketing work was actually driving results. That kind of rigour meant we could course-correct quickly when a brief or a creator partnership wasn't landing.
 
 The lesson across all of these is the same: your brief and incentive structure need to point in the same direction as your business objective. When they don't, even good creators with the right audience will produce the wrong outcome.
 
@@ -55,7 +55,7 @@ The third thing most B2B companies get wrong is measurement, and I've [written a
 
 B2B buying cycles are long. Someone sees a creator mention your product, they might not act on it for weeks or months. When they do, they'll probably Google your brand name, visit your site directly, maybe book a demo. Your analytics will attribute that to "direct" or "organic search." The creator who planted the seed gets zero credit.
 
-At Narrative, we dealt with this by adding HDYHAU (How Did You Hear About Us) tracking to our signup flow. It was the single most valuable thing we did for understanding creator impact. Without it, we would have looked at our dashboard and concluded that organic search was doing all the heavy lifting. With it, we could see that creators and community were driving a massive chunk of signups that traditional attribution was completely missing.
+I've used HDYHAU (How Did You Hear About Us) tracking at both BetterSaver and Narrative, and at both companies it was the single most valuable thing we did for understanding what was actually driving growth. Without it, you look at your dashboard and conclude that organic search and direct traffic are doing all the heavy lifting. With it, you can see that creators, community, and word of mouth are driving a massive chunk of signups that traditional attribution completely misses. At BetterSaver we built tight feedback loops around this — tracking CAC by channel, monitoring campaign effectiveness in near real-time, and using that data to shift budget quickly. At Narrative we did the same with our creator programme, cross-referencing HDYHAU responses against creator content launches to understand the real impact.
 
 If you're running B2B influencer marketing and only tracking affiliate codes or UTM links, you're measuring maybe 20% of the actual impact. The other 80% is showing up as "direct" traffic and you're crediting it to your brand rather than the creators who built the awareness in the first place.
 
