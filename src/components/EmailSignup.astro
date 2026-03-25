@@ -1,6 +1,7 @@
 ---
 const { variant = 'default' } = Astro.props;
 // variant: 'default' (standalone section), 'post-end' (after blog posts)
+const formId = `beehiiv-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
 <div class={`email-signup email-signup--${variant}`}>
@@ -18,7 +19,14 @@ const { variant = 'default' } = Astro.props;
         One email when I publish something new. Ecosystem marketing, creator strategies, and the thinking behind SaaS growth — from someone who's built it, not just studied it.
       </p>
     )}
-    <form class="email-signup-form" data-beehiiv-subscribe>
+    <iframe name={formId} style="display:none;" aria-hidden="true"></iframe>
+    <form
+      class="email-signup-form"
+      action="https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b068-9cae541012be"
+      method="POST"
+      target={formId}
+      data-beehiiv-subscribe
+    >
       <div class="email-signup-row">
         <input
           type="email"
@@ -32,46 +40,22 @@ const { variant = 'default' } = Astro.props;
       </div>
       <p class="email-signup-note">No spam. Unsubscribe anytime.</p>
       <p class="email-signup-success" style="display:none;">You're in — check your inbox.</p>
-      <p class="email-signup-error" style="display:none;">Something went wrong. Try again?</p>
     </form>
   </div>
 </div>
 
 <script>
   document.querySelectorAll('[data-beehiiv-subscribe]').forEach(form => {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const emailInput = form.querySelector('input[name="email"]');
-      const btn = form.querySelector('button');
+    form.addEventListener('submit', () => {
+      const row = form.querySelector('.email-signup-row');
       const note = form.querySelector('.email-signup-note');
       const success = form.querySelector('.email-signup-success');
-      const error = form.querySelector('.email-signup-error');
-      const email = emailInput.value;
-
-      btn.textContent = '...';
-      btn.disabled = true;
-      error.style.display = 'none';
-
-      try {
-        const res = await fetch('https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b068-9cae541012be', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams({ email }),
-        });
-
-        if (res.ok || res.redirected) {
-          emailInput.style.display = 'none';
-          btn.style.display = 'none';
-          note.style.display = 'none';
-          success.style.display = 'block';
-        } else {
-          throw new Error('Subscribe failed');
-        }
-      } catch (err) {
-        error.style.display = 'block';
-        btn.textContent = 'Subscribe';
-        btn.disabled = false;
-      }
+      // Short delay to let the form submit, then show success
+      setTimeout(() => {
+        row.style.display = 'none';
+        note.style.display = 'none';
+        success.style.display = 'block';
+      }, 500);
     });
   });
 </script>
@@ -185,11 +169,6 @@ const { variant = 'default' } = Astro.props;
     transition: transform 0.25s ease;
   }
 
-  .email-signup-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
   .email-signup-note {
     font-size: 0.75rem;
     color: var(--gray-500);
@@ -200,12 +179,6 @@ const { variant = 'default' } = Astro.props;
     font-size: 0.9rem;
     color: var(--accent);
     font-weight: 500;
-    margin-top: 0.5rem;
-  }
-
-  .email-signup-error {
-    font-size: 0.85rem;
-    color: #dc2626;
     margin-top: 0.5rem;
   }
 
