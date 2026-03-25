@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -39,12 +40,8 @@ function formatDate(date: Date) {
     <article class="post-content">
       <Content />
     </article>
+    <EmailSignup variant="post-end" />
     <div class="post-end">
-      <p class="post-end-eyebrow">What next</p>
-      <h2 class="post-end-heading">Found this useful?</h2>
-      <p class="post-end-text">
-        I write about ecosystem marketing, creator-led channels, and the thinking behind SaaS growth that actually sticks. If this sparked ideas, I'd love to connect.
-      </p>
       <div class="post-end-actions">
         <a
           href="https://www.linkedin.com/in/zachary-culpan/"

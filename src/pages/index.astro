@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import EmailSignup from '../components/EmailSignup.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
@@ -77,6 +78,9 @@ function formatDate(date: Date) {
       </div>
     </section>
   )}
+
+  <!-- Newsletter signup -->
+  <EmailSignup variant="default" />
 
   <!-- About Strip -->
   <section class="about-strip">
