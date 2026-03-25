@@ -28,7 +28,7 @@ const { variant = 'default' } = Astro.props;
           class="email-signup-input"
           aria-label="Email address"
         />
-        <button type="submit" class="email-signup-btn">Subscribe</button>
+        <button type="submit" class="email-signup-btn">Subscribe <span class="arrow" aria-hidden="true">→</span></button>
       </div>
       <p class="email-signup-note">No spam. Unsubscribe anytime.</p>
       <p class="email-signup-success" style="display:none;">You're in — check your inbox.</p>
@@ -131,16 +131,16 @@ const { variant = 'default' } = Astro.props;
 
   .email-signup-row {
     display: flex;
-    gap: 0.5rem;
-    max-width: 440px;
+    gap: 0.75rem;
+    max-width: 520px;
   }
 
   .email-signup-input {
     flex: 1;
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
     font-family: var(--font-sans);
-    border: 1px solid var(--gray-200);
+    border: 2px solid var(--gray-200);
     background: var(--white);
     color: var(--black);
     outline: none;
@@ -156,7 +156,10 @@ const { variant = 'default' } = Astro.props;
   }
 
   .email-signup-btn {
-    padding: 0.8rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
     font-size: 0.9rem;
     font-weight: 600;
     font-family: var(--font-sans);
@@ -171,6 +174,15 @@ const { variant = 'default' } = Astro.props;
 
   .email-signup-btn:hover {
     background: var(--accent-light);
+  }
+
+  .email-signup-btn:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .email-signup-btn .arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
   }
 
   .email-signup-btn:disabled {
