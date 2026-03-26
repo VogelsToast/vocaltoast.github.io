@@ -5,16 +5,19 @@ export const GET: APIRoute = async ({ site }) => {
   const posts = await getCollection('blog');
   const siteUrl = site?.toString() || 'https://zacculpan.com';
 
+  // Ensure siteUrl has trailing slash
+  const base = siteUrl.endsWith('/') ? siteUrl : `${siteUrl}/`;
+
   const urls = [
     // Static pages
-    { loc: siteUrl, changefreq: 'weekly', priority: '1.0' },
-    { loc: `${siteUrl}blog`, changefreq: 'weekly', priority: '0.9' },
-    { loc: `${siteUrl}about`, changefreq: 'monthly', priority: '0.7' },
+    { loc: base, changefreq: 'weekly', priority: '1.0' },
+    { loc: `${base}blog/`, changefreq: 'weekly', priority: '0.9' },
+    { loc: `${base}about/`, changefreq: 'monthly', priority: '0.7' },
     // Blog posts
     ...posts
       .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
       .map(post => ({
-        loc: `${siteUrl}blog/${post.id}`,
+        loc: `${base}blog/${post.id}/`,
         lastmod: post.data.pubDate.toISOString().split('T')[0],
         changefreq: 'monthly' as const,
         priority: '0.8',

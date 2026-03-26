@@ -11,7 +11,9 @@ const {
 } = Astro.props;
 
 const siteUrl = Astro.site?.toString() || 'https://zacculpan.com';
-const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+// Ensure canonical URL always has trailing slash
+const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const canonicalURL = new URL(pathname, siteUrl);
 const ogImageUrl = new URL(image, siteUrl).toString();
 const personSchema = {
   "@context": "https://schema.org",
