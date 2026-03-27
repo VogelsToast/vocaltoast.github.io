@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="480" fill="#fafafa" rx="8"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a1a">The Creator Marketing Measurement Stack</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#888">Four layers of signal, from awareness to retention</text>
+
+  <!-- Layer 1: Awareness -->
+  <rect x="80" y="80" width="640" height="80" rx="8" fill="#1a1a1a"/>
+  <text x="130" y="108" font-size="13" font-weight="600" fill="#fff">Layer 1: Awareness</text>
+  <text x="130" y="128" font-size="11" fill="#aaa">Are more of the right people hearing about you?</text>
+  <text x="480" y="108" font-size="10" fill="#aaa">Brand search lift</text>
+  <text x="480" y="124" font-size="10" fill="#aaa">Social mentions</text>
+  <text x="480" y="140" font-size="10" fill="#aaa">Community chatter</text>
+  <text x="620" y="108" font-size="10" fill="#aaa">Share of voice</text>
+  <text x="620" y="124" font-size="10" fill="#aaa">Google Trends</text>
+  <text x="620" y="140" font-size="10" fill="#aaa">GSC branded queries</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="160" x2="400" y2="180" stroke="#ccc" stroke-width="1.5"/>
+  <polygon points="395,178 405,178 400,186" fill="#ccc"/>
+
+  <!-- Layer 2: Interest -->
+  <rect x="120" y="188" width="560" height="80" rx="8" fill="#444"/>
+  <text x="170" y="216" font-size="13" font-weight="600" fill="#fff">Layer 2: Interest</text>
+  <text x="170" y="236" font-size="11" fill="#aaa">Are people actively investigating you?</text>
+  <text x="470" y="216" font-size="10" fill="#aaa">HDYHAU data</text>
+  <text x="470" y="232" font-size="10" fill="#aaa">Site traffic patterns</text>
+  <text x="470" y="248" font-size="10" fill="#aaa">Content engagement</text>
+  <text x="590" y="216" font-size="10" fill="#aaa">Email signups</text>
+  <text x="590" y="232" font-size="10" fill="#aaa">Referral sources</text>
+  <text x="590" y="248" font-size="10" fill="#aaa">Pages per session</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="268" x2="400" y2="288" stroke="#ccc" stroke-width="1.5"/>
+  <polygon points="395,286 405,286 400,294" fill="#ccc"/>
+
+  <!-- Layer 3: Conversion -->
+  <rect x="160" y="296" width="480" height="80" rx="8" fill="#777"/>
+  <text x="210" y="324" font-size="13" font-weight="600" fill="#fff">Layer 3: Conversion</text>
+  <text x="210" y="344" font-size="11" fill="#ddd">Are people buying?</text>
+  <text x="440" y="324" font-size="10" fill="#ddd">Affiliate codes</text>
+  <text x="440" y="340" font-size="10" fill="#ddd">Tracked link conversions</text>
+  <text x="440" y="356" font-size="10" fill="#ddd">HDYHAU-to-revenue</text>
+  <text x="570" y="324" font-size="10" fill="#ddd">CAC trends</text>
+  <text x="570" y="340" font-size="10" fill="#ddd">Blended CAC</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="376" x2="400" y2="396" stroke="#ccc" stroke-width="1.5"/>
+  <polygon points="395,394 405,394 400,402" fill="#ccc"/>
+
+  <!-- Layer 4: Retention -->
+  <rect x="200" y="404" width="400" height="60" rx="8" fill="#aaa"/>
+  <text x="250" y="428" font-size="13" font-weight="600" fill="#fff">Layer 4: Retention</text>
+  <text x="250" y="448" font-size="11" fill="#fff">Are they sticking around?</text>
+  <text x="460" y="428" font-size="10" fill="#fff">LTV by channel</text>
+  <text x="460" y="444" font-size="10" fill="#fff">NPS scores</text>
+  <text x="550" y="428" font-size="10" fill="#fff">Repeat rates</text>
+  <text x="550" y="444" font-size="10" fill="#fff">Churn analysis</text>
+</svg>

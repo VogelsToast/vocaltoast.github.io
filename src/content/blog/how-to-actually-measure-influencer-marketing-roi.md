@@ -19,6 +19,8 @@ In that scenario, obsessing over affiliate code redemptions is pointless. You're
 
 A Morning Brew and Tracksuit study from earlier this year surveyed over 250 marketers about how they're using creators. The tension they found is telling: 82% of marketers say they use creators primarily for brand awareness, but when asked about their overall marketing goals beyond creators, 54% cite direct sales as a top priority. Only 29% actually use creators to drive sales. There's a disconnect between what companies want creators to do (drive revenue) and what they actually deploy them for (top of funnel). And 42% of respondents cited measurement as their single biggest barrier.
 
+![What creators are deployed for vs what companies actually measure](/blog-images/measurement-mismatch.svg)
+
 That gap isn't going to close until teams get more intentional about matching their measurement approach to their campaign goal. So let me walk through how I'd think about this at each level of the funnel.
 
 ## When the direction is right but the execution is wrong
@@ -30,6 +32,8 @@ Imagine a company that's had real success with a partner and creator programme. 
 That's the right instinct. But here's where it goes wrong.
 
 Instead of scaling the programme by building out more tiers, diversifying across creators of different sizes, and investing in the measurement infrastructure to track impact properly, the budget gets concentrated. Maybe it's $300,000 going to ten big-name partners, with the expectation that each one will deliver a measurable CAC payback within six or seven months. The partners are essentially being asked to do the same thing they've always done, but every month, at a much higher price point, with direct conversion expectations attached.
+
+![Why linear scaling doesn't work for creator programmes: concentrated vs diversified approaches](/blog-images/linear-scaling-fallacy.svg)
 
 I've watched this scenario unfold, and it creates problems on multiple levels.
 
@@ -102,6 +106,8 @@ The real unlock isn't perfecting measurement at any single layer. It's building 
 Ekimetrics, who work with brands like Estée Lauder on marketing measurement, frame this as three layers: desirability (did creator content drive people to search for your brand?), consideration (did it drive them to your site or product page?), and conversion (did it drive actual sales?). Each layer uses different data sources and metrics. The insight isn't in any single number. It's in how the layers connect.
 
 I'd simplify their framework into what I think of as a measurement stack for creator programmes:
+
+![The four-layer measurement stack for creator marketing](/blog-images/measurement-stack.svg)
 
 **Layer 1: Awareness signals.** Brand search lift, social mentions, community chatter, share of voice in your category. Are more people becoming aware of you?
 
