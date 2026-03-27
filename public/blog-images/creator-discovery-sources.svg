@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="340" fill="#fafafa" rx="8"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a1a">Where to Find Your First Creators</text>
+
+  <!-- Direction labels -->
+  <text x="30" y="62" font-size="11" font-weight="600" fill="#1a1a1a">← Start here</text>
+  <text x="770" y="62" text-anchor="end" font-size="11" fill="#999">Last resort →</text>
+
+  <!-- Box 1: Existing Users -->
+  <rect x="28" y="72" width="163" height="170" rx="6" fill="#1a1a1a"/>
+  <text x="109" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Existing Users</text>
+  <line x1="48" y1="107" x2="172" y2="107" stroke="#333" stroke-width="1"/>
+  <text x="109" y="124" text-anchor="middle" font-size="10" fill="#aaa">Already using and loving</text>
+  <text x="109" y="138" text-anchor="middle" font-size="10" fill="#aaa">your product — creating</text>
+  <text x="109" y="152" text-anchor="middle" font-size="10" fill="#aaa">content without prompting</text>
+  <text x="109" y="178" text-anchor="middle" font-size="10" fill="#666">Where to look:</text>
+  <text x="109" y="192" text-anchor="middle" font-size="10" fill="#666">HDYHAU data, brand</text>
+  <text x="109" y="206" text-anchor="middle" font-size="10" fill="#666">mentions, user reviews</text>
+  <text x="109" y="232" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Most authentic</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="195" y1="157" x2="211" y2="157" stroke="#ccc" stroke-width="1.5"/>
+  <polygon points="209,153 217,157 209,161" fill="#ccc"/>
+
+  <!-- Box 2: Community Advocates -->
+  <rect x="218" y="72" width="163" height="170" rx="6" fill="#333"/>
+  <text x="299" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Community</text>
+  <text x="299" y="113" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Advocates</text>
+  <line x1="238" y1="122" x2="362" y2="122" stroke="#444" stroke-width="1"/>
+  <text x="299" y="139" text-anchor="middle" font-size="10" fill="#aaa">Recommending you in</text>
+  <text x="299" y="153" text-anchor="middle" font-size="10" fill="#aaa">forums and groups</text>
+  <text x="299" y="167" text-anchor="middle" font-size="10" fill="#aaa">without any relationship</text>
+  <text x="299" y="193" text-anchor="middle" font-size="10" fill="#666">Where to look:</text>
+  <text x="299" y="207" text-anchor="middle" font-size="10" fill="#666">Reddit, Facebook groups,</text>
+  <text x="299" y="221" text-anchor="middle" font-size="10" fill="#666">Slack communities</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="385" y1="157" x2="401" y2="157" stroke="#ccc" stroke-width="1.5"/>
+  <polygon points="399,153 407,157 399,161" fill="#ccc"/>
+
+  <!-- Box 3: Inbound Creators -->
+  <rect x="408" y="72" width="163" height="170" rx="6" fill="#666"/>
+  <text x="489" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Inbound</text>
+  <text x="489" y="113" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Creators</text>
+  <line x1="428" y1="122" x2="552" y2="122" stroke="#777" stroke-width="1"/>
+  <text x="489" y="139" text-anchor="middle" font-size="10" fill="#ddd">Creators who find your</text>
+  <text x="489" y="153" text-anchor="middle" font-size="10" fill="#ddd">programme and apply</text>
+  <text x="489" y="167" text-anchor="middle" font-size="10" fill="#ddd">or reach out to you</text>
+  <text x="489" y="193" text-anchor="middle" font-size="10" fill="#bbb">Where to look:</text>
+  <text x="489" y="207" text-anchor="middle" font-size="10" fill="#bbb">Your inbox, affiliate</text>
+  <text x="489" y="221" text-anchor="middle" font-size="10" fill="#bbb">programme applications</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="575" y1="157" x2="591" y2="157" stroke="#ccc" stroke-width="1.5"/>
+  <polygon points="589,153 597,157 589,161" fill="#ccc"/>
+
+  <!-- Box 4: Outbound Prospecting -->
+  <rect x="598" y="72" width="163" height="170" rx="6" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="679" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">Outbound</text>
+  <text x="679" y="113" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">Prospecting</text>
+  <line x1="618" y1="122" x2="742" y2="122" stroke="#ddd" stroke-width="1"/>
+  <text x="679" y="139" text-anchor="middle" font-size="10" fill="#666">Creators you identify</text>
+  <text x="679" y="153" text-anchor="middle" font-size="10" fill="#666">and reach out to</text>
+  <text x="679" y="167" text-anchor="middle" font-size="10" fill="#666">cold</text>
+  <text x="679" y="193" text-anchor="middle" font-size="10" fill="#888">Where to look:</text>
+  <text x="679" y="207" text-anchor="middle" font-size="10" fill="#888">Niche hashtags,</text>
+  <text x="679" y="221" text-anchor="middle" font-size="10" fill="#888">competitor mentions</text>
+  <text x="679" y="232" text-anchor="middle" font-size="10" fill="#999">Least authentic</text>
+
+  <!-- Bottom note -->
+  <rect x="50" y="264" width="700" height="56" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="400" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#1a1a1a">Most programmes skip straight to Outbound. The best ones start at Existing Users.</text>
+  <text x="400" y="306" text-anchor="middle" font-size="11" fill="#666">Authenticity can't be briefed into existence. Find the people who already love your product — then build around them.</text>
+</svg>

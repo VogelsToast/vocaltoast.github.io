@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="800" height="400" fill="#fafafa" rx="8"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a1a">Creator Outreach: What Gets Ignored vs What Gets a Reply</text>
+
+  <!-- Left column: Generic outreach -->
+  <text x="200" y="70" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">Generic outreach</text>
+
+  <rect x="40" y="82" width="320" height="44" rx="6" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="200" y="100" text-anchor="middle" font-size="11" fill="#555">Hi [Name],</text>
+  <text x="200" y="116" text-anchor="middle" font-size="10" fill="#888">Generic salutation, no research visible</text>
+
+  <line x1="200" y1="126" x2="200" y2="144" stroke="#ddd" stroke-width="1.5"/>
+  <polygon points="196,142 204,142 200,149" fill="#ddd"/>
+
+  <rect x="40" y="151" width="320" height="44" rx="6" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="200" y="169" text-anchor="middle" font-size="11" fill="#555">Love your content. Great work.</text>
+  <text x="200" y="185" text-anchor="middle" font-size="10" fill="#888">Could apply to anyone — signals mass outreach</text>
+
+  <line x1="200" y1="195" x2="200" y2="213" stroke="#ddd" stroke-width="1.5"/>
+  <polygon points="196,211 204,211 200,218" fill="#ddd"/>
+
+  <rect x="40" y="220" width="320" height="44" rx="6" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="200" y="238" text-anchor="middle" font-size="11" fill="#555">We'd love to partner with you.</text>
+  <text x="200" y="254" text-anchor="middle" font-size="10" fill="#888">Leads with what you want, not what they get</text>
+
+  <line x1="200" y1="264" x2="200" y2="282" stroke="#ddd" stroke-width="1.5"/>
+  <polygon points="196,280 204,280 200,287" fill="#ddd"/>
+
+  <rect x="40" y="289" width="320" height="44" rx="6" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="200" y="307" text-anchor="middle" font-size="11" fill="#555">Let us know if you're interested!</text>
+  <text x="200" y="323" text-anchor="middle" font-size="10" fill="#888">Forces a binary decision before any rapport exists</text>
+
+  <rect x="80" y="348" width="240" height="32" rx="4" fill="#e8e8e8"/>
+  <text x="200" y="369" text-anchor="middle" font-size="12" font-weight="600" fill="#888">Gets ignored</text>
+
+  <!-- Right column: Effective outreach -->
+  <text x="600" y="70" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">What actually works</text>
+
+  <rect x="440" y="82" width="320" height="44" rx="6" fill="#1a1a1a"/>
+  <text x="600" y="100" text-anchor="middle" font-size="11" fill="#fff">Hi [Their actual name],</text>
+  <text x="600" y="116" text-anchor="middle" font-size="10" fill="#aaa">Their real name — shows basic human effort</text>
+
+  <line x1="600" y1="126" x2="600" y2="144" stroke="#555" stroke-width="1.5"/>
+  <polygon points="596,142 604,142 600,149" fill="#555"/>
+
+  <rect x="440" y="151" width="320" height="44" rx="6" fill="#1a1a1a"/>
+  <text x="600" y="169" text-anchor="middle" font-size="11" fill="#fff">Saw your [specific post] from [date].</text>
+  <text x="600" y="185" text-anchor="middle" font-size="10" fill="#aaa">Proves you actually looked at their work</text>
+
+  <line x1="600" y1="195" x2="600" y2="213" stroke="#555" stroke-width="1.5"/>
+  <polygon points="596,211 604,211 600,218" fill="#555"/>
+
+  <rect x="440" y="220" width="320" height="44" rx="6" fill="#333"/>
+  <text x="600" y="238" text-anchor="middle" font-size="11" fill="#fff">I noticed you mentioned [specific thing].</text>
+  <text x="600" y="254" text-anchor="middle" font-size="10" fill="#aaa">Specific signal — not a template, a real observation</text>
+
+  <line x1="600" y1="264" x2="600" y2="282" stroke="#555" stroke-width="1.5"/>
+  <polygon points="596,280 604,280 600,218" fill="#555"/>
+  <polygon points="596,280 604,280 600,287" fill="#555"/>
+
+  <rect x="440" y="289" width="320" height="44" rx="6" fill="#333"/>
+  <text x="600" y="307" text-anchor="middle" font-size="11" fill="#fff">I'd love to hear more about your workflow.</text>
+  <text x="600" y="323" text-anchor="middle" font-size="10" fill="#aaa">Low-commitment ask — a conversation, not a contract</text>
+
+  <rect x="480" y="348" width="240" height="32" rx="4" fill="#1a1a1a"/>
+  <text x="600" y="369" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Gets a reply</text>
+</svg>
