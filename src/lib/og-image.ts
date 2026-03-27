@@ -22,11 +22,11 @@ const GRAY_500 = '#78716c';
 const DIVIDER = '#1e1a18';
 
 function titleFontSize(title: string): number {
-  if (title.length < 35) return 72;
-  if (title.length < 55) return 62;
-  if (title.length < 75) return 52;
-  if (title.length < 95) return 44;
-  return 38;
+  if (title.length < 35) return 68;
+  if (title.length < 55) return 56;
+  if (title.length < 75) return 48;
+  if (title.length < 95) return 40;
+  return 34;
 }
 
 async function renderSvgToPng(svg: string): Promise<Buffer> {
@@ -280,7 +280,7 @@ export async function renderPostOg(
               display: 'flex',
               flexDirection: 'column',
               flex: 1,
-              padding: '56px 40px 48px 68px',
+              padding: '52px 40px 44px 68px',
             },
             children: [
               // Eyebrow
@@ -295,7 +295,7 @@ export async function renderPostOg(
                     letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                     display: 'flex',
-                    marginBottom: '36px',
+                    marginBottom: '28px',
                   },
                   children: 'Zac Culpan',
                 },
