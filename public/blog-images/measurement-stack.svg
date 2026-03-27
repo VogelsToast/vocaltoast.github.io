@@ -11,9 +11,9 @@
   <text x="480" y="108" font-size="10" fill="#aaa">Brand search lift</text>
   <text x="480" y="124" font-size="10" fill="#aaa">Social mentions</text>
   <text x="480" y="140" font-size="10" fill="#aaa">Community chatter</text>
-  <text x="620" y="108" font-size="10" fill="#aaa">Share of voice</text>
-  <text x="620" y="124" font-size="10" fill="#aaa">Google Trends</text>
-  <text x="620" y="140" font-size="10" fill="#aaa">GSC branded queries</text>
+  <text x="598" y="108" font-size="10" fill="#aaa">Share of voice</text>
+  <text x="598" y="124" font-size="10" fill="#aaa">Google Trends</text>
+  <text x="598" y="140" font-size="10" fill="#aaa">Branded queries</text>
 
   <!-- Arrow -->
   <line x1="400" y1="160" x2="400" y2="180" stroke="#ccc" stroke-width="1.5"/>
@@ -52,8 +52,8 @@
   <rect x="200" y="404" width="400" height="60" rx="8" fill="#aaa"/>
   <text x="250" y="428" font-size="13" font-weight="600" fill="#fff">Layer 4: Retention</text>
   <text x="250" y="448" font-size="11" fill="#fff">Are they sticking around?</text>
-  <text x="460" y="428" font-size="10" fill="#fff">LTV by channel</text>
-  <text x="460" y="444" font-size="10" fill="#fff">NPS scores</text>
-  <text x="550" y="428" font-size="10" fill="#fff">Repeat rates</text>
-  <text x="550" y="444" font-size="10" fill="#fff">Churn analysis</text>
+  <text x="430" y="428" font-size="10" fill="#fff">LTV by channel</text>
+  <text x="430" y="444" font-size="10" fill="#fff">NPS scores</text>
+  <text x="515" y="428" font-size="10" fill="#fff">Repeat rates</text>
+  <text x="515" y="444" font-size="10" fill="#fff">Churn analysis</text>
 </svg>
