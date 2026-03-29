@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const recentPosts = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<BaseLayout
+  title="Page Not Found — Zac Culpan"
+  description="The page you were looking for doesn't exist. Try the latest writing or head back to the homepage."
+>
+  <section class="not-found">
+    <div class="container">
+      <div class="not-found-inner">
+        <span class="not-found-tag">404</span>
+        <h1 class="not-found-title">That page doesn't seem to exist.</h1>
+        <p class="not-found-copy">
+          It may have moved, the URL might be wrong, or the link could be out of date. Best next step is probably the homepage, the writing page, or one of the recent posts below.
+        </p>
+
+        <div class="not-found-actions">
+          <a href={`${import.meta.env.BASE_URL}`} class="btn-primary">Go to homepage</a>
+          <a href={`${import.meta.env.BASE_URL}blog/`} class="btn-secondary">Browse writing</a>
+        </div>
+
+        <div class="not-found-links">
+          <a href={`${import.meta.env.BASE_URL}about/`} class="utility-link">About Zac</a>
+          <a href="https://www.linkedin.com/in/zachary-culpan/" target="_blank" rel="noopener noreferrer" class="utility-link">LinkedIn</a>
+        </div>
+      </div>
+
+      {recentPosts.length > 0 && (
+        <div class="not-found-recent">
+          <div class="section-header">
+            <span class="section-title">Recent writing</span>
+          </div>
+
+          <div class="post-mini-list">
+            {recentPosts.map((post) => (
+              <a href={`${import.meta.env.BASE_URL}blog/${post.id}/`} class="post-mini">
+                <div class="post-mini-date">{formatDate(post.data.pubDate)}</div>
+                <div>
+                  <span class="post-mini-tag">{post.data.tags?.[0] || 'Growth'}</span>
+                  <h2 class="post-mini-title">{post.data.title}</h2>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding: 5rem 0 6rem;
+  }
+
+  .not-found-inner {
+    max-width: 720px;
+    padding: 0 0 3rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .not-found-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    background: var(--accent-tint);
+    border: 1px solid var(--accent-tint-border);
+    padding: 0.25rem 0.65rem;
+  }
+
+  .not-found-title {
+    font-size: clamp(2.3rem, 5vw, 4.25rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--black);
+    margin-bottom: 1rem;
+    max-width: 720px;
+  }
+
+  .not-found-copy {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--gray-600);
+    max-width: 620px;
+    margin-bottom: 2rem;
+  }
+
+  .not-found-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+
+  .not-found-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .utility-link {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .utility-link:hover {
+    color: var(--black);
+  }
+
+  .not-found-recent {
+    padding-top: 3rem;
+  }
+</style>
