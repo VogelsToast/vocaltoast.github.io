@@ -57,6 +57,8 @@ B2B buying cycles are long. Someone sees a creator mention your product, they mi
 
 I've used HDYHAU (How Did You Hear About Us) tracking at both BetterSaver and Narrative, and at both companies it was the single most valuable thing we did for understanding what was actually driving growth. Without it, you look at your dashboard and conclude that organic search and direct traffic are doing all the heavy lifting. With it, you can see that creators, community, and word of mouth are driving a massive chunk of signups that traditional attribution completely misses. At BetterSaver we built tight feedback loops around this — tracking CAC by channel, monitoring campaign effectiveness in near real-time, and using that data to shift budget quickly. At Narrative we did the same with our creator programme, cross-referencing HDYHAU responses against creator content launches to understand the real impact.
 
+If you're trying to model that more honestly, I built a [creator marketing ROI calculator](/tools/creator-marketing-roi-calculator/) that combines direct attributed customers with creator-influenced HDYHAU signups so you can see a more realistic blended number.
+
 If you're running B2B influencer marketing and only tracking affiliate codes or UTM links, you're measuring maybe 20% of the actual impact. The other 80% is showing up as "direct" traffic and you're crediting it to your brand rather than the creators who built the awareness in the first place.
 
 ## What good B2B influencer marketing looks like

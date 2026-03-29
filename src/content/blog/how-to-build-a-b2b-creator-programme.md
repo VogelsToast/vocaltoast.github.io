@@ -97,6 +97,8 @@ What you should track in the first 90 days:
 
 Don't expect clean revenue attribution at this point. You're building the foundation. The revenue data comes later, and when it does, it'll make a lot more sense when you've got the full-funnel measurement infrastructure I described in the [measurement post](/blog/how-to-actually-measure-influencer-marketing-roi/).
 
+If you want a simple way to start putting numbers around that, I built a [creator marketing ROI calculator](/tools/creator-marketing-roi-calculator/) that combines direct creator revenue with HDYHAU-influenced signups.
+
 ## What scaling actually looks like
 
 "Scaling" a creator programme doesn't mean finding 10 times more creators. It means going deeper with the ones that are working.

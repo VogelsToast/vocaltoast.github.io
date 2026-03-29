@@ -1,0 +1,557 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Creator Marketing ROI Calculator — Zac Culpan';
+const description = 'A practical creator marketing ROI calculator for SaaS and B2B teams. Model direct creator revenue, assisted revenue from HDYHAU, and blended CAC in one place.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="tool-hero">
+    <div class="container tool-shell">
+      <div class="tool-header">
+        <span class="tool-tag">Tool</span>
+        <h1>Creator Marketing ROI Calculator</h1>
+        <p>
+          Most creator ROI calculators only count direct tracked conversions. This one also lets you
+          model the assisted value showing up in HDYHAU responses, which is usually where the real
+          picture starts to emerge.
+        </p>
+      </div>
+
+      <div class="tool-layout">
+        <section class="calculator-card" aria-labelledby="calculator-heading">
+          <div class="card-header">
+            <h2 id="calculator-heading">Inputs</h2>
+            <p>Use first-year revenue or gross profit per customer for a more realistic number.</p>
+          </div>
+
+          <div class="field-grid">
+            <label class="field">
+              <div class="label-row">
+                <span>Total creator spend</span>
+                <details class="help-tip">
+                  <summary aria-label="What total creator spend means">?</summary>
+                  <div class="help-popover">
+                    Include creator fees, commission, travel, gifting, production support, and any agency or freelancer costs tied to the programme. You can usually pull this from your budget tracker, finance sheet, or campaign recap.
+                  </div>
+                </details>
+              </div>
+              <input id="spend" type="number" min="0" step="100" value="12000" />
+            </label>
+
+            <label class="field">
+              <div class="label-row">
+                <span>Direct attributed customers</span>
+                <details class="help-tip">
+                  <summary aria-label="What direct attributed customers means">?</summary>
+                  <div class="help-popover">
+                    Customers you can directly tie to creators through affiliate codes, tracked links, or other explicit attribution. This is the easy-to-measure part, not the full picture.
+                  </div>
+                </details>
+              </div>
+              <input id="directCustomers" type="number" min="0" step="1" value="18" />
+            </label>
+
+            <label class="field">
+              <div class="label-row">
+                <span>Revenue per customer</span>
+                <details class="help-tip">
+                  <summary aria-label="What revenue per customer means">?</summary>
+                  <div class="help-popover">
+                    Use first-year revenue, gross profit, or whatever commercial value you normally use for new customer acquisition decisions. You can find this in billing, CRM, or finance reporting.
+                  </div>
+                </details>
+              </div>
+              <input id="revenuePerCustomer" type="number" min="0" step="100" value="1800" />
+            </label>
+
+            <label class="field">
+              <div class="label-row">
+                <span>HDYHAU signups mentioning creators</span>
+                <details class="help-tip">
+                  <summary aria-label="What HDYHAU signups mentioning creators means">?</summary>
+                  <div class="help-popover">
+                    Count signups whose self-reported “How did you hear about us?” response points to creators, ambassadors, influencers, or creator-led community discovery. Pull this from your form responses or CRM.
+                  </div>
+                </details>
+              </div>
+              <input id="hdyhauSignups" type="number" min="0" step="1" value="75" />
+            </label>
+
+            <label class="field">
+              <div class="label-row">
+                <span>Signup-to-paid conversion rate (%)</span>
+                <details class="help-tip">
+                  <summary aria-label="What signup to paid conversion rate means">?</summary>
+                  <div class="help-popover">
+                    Your normal conversion rate from signup or trial to paid customer. If you do not have a creator-specific number, use your broader baseline from product analytics or CRM reporting.
+                  </div>
+                </details>
+              </div>
+              <input id="conversionRate" type="number" min="0" max="100" step="0.1" value="12" />
+            </label>
+          </div>
+        </section>
+
+        <section class="results-card" aria-labelledby="results-heading">
+          <div class="card-header">
+            <h2 id="results-heading">Estimated outputs</h2>
+            <p>These numbers are directional. The point is to get closer to the truth than affiliate codes alone.</p>
+          </div>
+
+          <div class="result-grid">
+            <div class="result">
+              <div class="label-row">
+                <span class="result-label">Direct revenue</span>
+                <details class="help-tip">
+                  <summary aria-label="What direct revenue means">?</summary>
+                  <div class="help-popover">
+                    Direct attributed customers multiplied by revenue per customer. This is the cleanest number, but usually the most conservative one.
+                  </div>
+                </details>
+              </div>
+              <strong id="directRevenue">$0</strong>
+            </div>
+            <div class="result">
+              <div class="label-row">
+                <span class="result-label">Estimated assisted customers</span>
+                <details class="help-tip">
+                  <summary aria-label="What estimated assisted customers means">?</summary>
+                  <div class="help-popover">
+                    The calculator applies your signup-to-paid rate to HDYHAU creator-influenced signups to estimate how many additional customers creators may have influenced beyond direct attribution.
+                  </div>
+                </details>
+              </div>
+              <strong id="assistedCustomers">0</strong>
+            </div>
+            <div class="result">
+              <div class="label-row">
+                <span class="result-label">Estimated assisted revenue</span>
+                <details class="help-tip">
+                  <summary aria-label="What estimated assisted revenue means">?</summary>
+                  <div class="help-popover">
+                    Estimated assisted customers multiplied by revenue per customer. This is the extra value likely being missed by affiliate-code-only reporting.
+                  </div>
+                </details>
+              </div>
+              <strong id="assistedRevenue">$0</strong>
+            </div>
+            <div class="result">
+              <div class="label-row">
+                <span class="result-label">Total estimated revenue</span>
+                <details class="help-tip">
+                  <summary aria-label="What total estimated revenue means">?</summary>
+                  <div class="help-popover">
+                    Direct revenue plus estimated assisted revenue. This is the directional number to compare against spend when judging overall creator performance.
+                  </div>
+                </details>
+              </div>
+              <strong id="totalRevenue">$0</strong>
+            </div>
+            <div class="result">
+              <div class="label-row">
+                <span class="result-label">Direct CAC</span>
+                <details class="help-tip">
+                  <summary aria-label="What direct CAC means">?</summary>
+                  <div class="help-popover">
+                    Creator spend divided only by directly attributed customers. Useful, but often misleadingly harsh if creators are driving meaningful assisted influence.
+                  </div>
+                </details>
+              </div>
+              <strong id="directCac">$0</strong>
+            </div>
+            <div class="result">
+              <div class="label-row">
+                <span class="result-label">Blended creator CAC</span>
+                <details class="help-tip">
+                  <summary aria-label="What blended creator CAC means">?</summary>
+                  <div class="help-popover">
+                    Creator spend divided by direct plus estimated assisted customers. This is often a more realistic view of efficiency when HDYHAU is part of the measurement stack.
+                  </div>
+                </details>
+              </div>
+              <strong id="blendedCac">$0</strong>
+            </div>
+          </div>
+
+          <div class="headline-metric">
+            <div class="label-row">
+              <span class="result-label">Estimated ROI</span>
+              <details class="help-tip help-tip-inverse">
+                <summary aria-label="What estimated ROI means">?</summary>
+                <div class="help-popover">
+                  Calculated as total estimated revenue minus creator spend, divided by creator spend. Treat this as directional guidance, not accounting truth.
+                </div>
+              </details>
+            </div>
+            <strong id="estimatedRoi">0%</strong>
+          </div>
+
+          <div class="tool-note">
+            <p>
+              This model assumes that HDYHAU signups mentioning creators are incremental influenced
+              opportunities, then estimates how many convert using your normal signup-to-paid rate.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container tool-content">
+      <h2>What this calculator is for</h2>
+      <p>
+        This is built for teams running creator, ambassador, or influencer programmes where the real
+        impact rarely shows up cleanly in a dashboard. Someone sees a creator talk about your
+        product, hears about you again in the community, then later signs up through direct or brand
+        search. Traditional attribution gives the creator almost none of the credit.
+      </p>
+      <p>
+        That is why I keep pushing HDYHAU tracking as part of the measurement stack. If you can
+        combine direct attributed customers with self-reported creator-influenced signups, you get a
+        far more useful estimate of whether the programme is actually working.
+      </p>
+
+      <h2>How to use it properly</h2>
+      <ul>
+        <li>Use real spend across creator fees, commission, travel, gifting, and production support.</li>
+        <li>Use revenue per customer that reflects how you actually value a new customer.</li>
+        <li>Only include HDYHAU signups where creator influence is genuinely the signal.</li>
+        <li>Sanity-check the result against branded search lift, CAC trends, and qualitative feedback.</li>
+      </ul>
+
+      <h2>What it still misses</h2>
+      <p>
+        Even this still undercounts the full effect. Creator and ecosystem marketing also shape brand
+        trust, referral behaviour, content performance, and how warm the market feels when a prospect
+        finally arrives. That is part of why the measurement problem is still hard.
+      </p>
+
+      <div class="related-links">
+        <h3>Related writing</h3>
+        <ul>
+          <li><a href="/blog/how-to-actually-measure-influencer-marketing-roi/">How to Actually Measure Influencer Marketing ROI</a></li>
+          <li><a href="/blog/why-measuring-influencer-marketing-roi-is-broken/">Why Measuring Influencer Marketing ROI Is Still Broken</a></li>
+          <li><a href="/blog/b2b-influencer-marketing-what-actually-works/">B2B Influencer Marketing: What Actually Works in 2026</a></li>
+          <li><a href="/blog/how-to-build-a-b2b-creator-programme/">How to Build a B2B Creator Programme From Scratch</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const currency = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    });
+
+    const percent = new Intl.NumberFormat('en-US', {
+      maximumFractionDigits: 1,
+    });
+
+    const ids = {
+      spend: document.getElementById('spend'),
+      directCustomers: document.getElementById('directCustomers'),
+      revenuePerCustomer: document.getElementById('revenuePerCustomer'),
+      hdyhauSignups: document.getElementById('hdyhauSignups'),
+      conversionRate: document.getElementById('conversionRate'),
+      directRevenue: document.getElementById('directRevenue'),
+      assistedCustomers: document.getElementById('assistedCustomers'),
+      assistedRevenue: document.getElementById('assistedRevenue'),
+      totalRevenue: document.getElementById('totalRevenue'),
+      directCac: document.getElementById('directCac'),
+      blendedCac: document.getElementById('blendedCac'),
+      estimatedRoi: document.getElementById('estimatedRoi'),
+    };
+
+    function readNumber(input) {
+      return Number(input?.value || 0);
+    }
+
+    function updateCalculator() {
+      const spend = readNumber(ids.spend);
+      const directCustomers = readNumber(ids.directCustomers);
+      const revenuePerCustomer = readNumber(ids.revenuePerCustomer);
+      const hdyhauSignups = readNumber(ids.hdyhauSignups);
+      const conversionRate = readNumber(ids.conversionRate) / 100;
+
+      const directRevenue = directCustomers * revenuePerCustomer;
+      const assistedCustomers = hdyhauSignups * conversionRate;
+      const assistedRevenue = assistedCustomers * revenuePerCustomer;
+      const totalRevenue = directRevenue + assistedRevenue;
+
+      const directCac = directCustomers > 0 ? spend / directCustomers : 0;
+      const totalCustomers = directCustomers + assistedCustomers;
+      const blendedCac = totalCustomers > 0 ? spend / totalCustomers : 0;
+      const estimatedRoi = spend > 0 ? ((totalRevenue - spend) / spend) * 100 : 0;
+
+      ids.directRevenue.textContent = currency.format(directRevenue);
+      ids.assistedCustomers.textContent = percent.format(assistedCustomers);
+      ids.assistedRevenue.textContent = currency.format(assistedRevenue);
+      ids.totalRevenue.textContent = currency.format(totalRevenue);
+      ids.directCac.textContent = currency.format(directCac);
+      ids.blendedCac.textContent = currency.format(blendedCac);
+      ids.estimatedRoi.textContent = `${percent.format(estimatedRoi)}%`;
+    }
+
+    [
+      ids.spend,
+      ids.directCustomers,
+      ids.revenuePerCustomer,
+      ids.hdyhauSignups,
+      ids.conversionRate,
+    ].forEach((input) => input?.addEventListener('input', updateCalculator));
+
+    updateCalculator();
+  </script>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .tool-shell {
+    max-width: 1100px;
+  }
+
+  .tool-header {
+    max-width: 760px;
+    margin-bottom: 2.5rem;
+  }
+
+  .tool-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    background: var(--accent-tint);
+    border: 1px solid var(--accent-tint-border);
+    padding: 0.25rem 0.65rem;
+  }
+
+  .tool-header h1 {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .tool-header p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--gray-600);
+  }
+
+  .tool-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .calculator-card,
+  .results-card {
+    background: var(--off-white);
+    border: 1px solid var(--gray-200);
+    padding: 1.5rem;
+  }
+
+  .card-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .card-header p {
+    font-size: 0.95rem;
+    color: var(--gray-600);
+  }
+
+  .field-grid,
+  .result-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .field span,
+  .result-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-bottom: 0;
+  }
+
+  .help-tip {
+    position: relative;
+  }
+
+  .help-tip summary {
+    list-style: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 999px;
+    border: 1px solid var(--accent-tint-border);
+    background: var(--accent-tint);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .help-tip summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .help-tip[open] summary,
+  .help-tip summary:hover {
+    background: var(--accent);
+    color: var(--white);
+  }
+
+  .help-tip-inverse summary {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white);
+  }
+
+  .help-popover {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 0;
+    z-index: 10;
+    width: min(280px, 70vw);
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    color: var(--gray-600);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    box-shadow: 0 12px 30px rgba(12, 10, 9, 0.08);
+  }
+
+  .field input {
+    width: 100%;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    color: var(--black);
+    font-family: var(--font-sans);
+  }
+
+  .field input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .result {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: 1rem;
+  }
+
+  .result strong,
+  .headline-metric strong {
+    font-size: 1.4rem;
+    line-height: 1.1;
+    color: var(--black);
+  }
+
+  .headline-metric {
+    margin-top: 1rem;
+    background: var(--black);
+    color: var(--white);
+    padding: 1.1rem 1.2rem;
+  }
+
+  .headline-metric .result-label,
+  .headline-metric strong {
+    color: var(--white);
+    margin-bottom: 0;
+  }
+
+  .headline-metric .result-label {
+    margin-bottom: 0.4rem;
+  }
+
+  .headline-metric strong {
+    font-size: 2rem;
+  }
+
+  .tool-note {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--accent-tint-border);
+    background: var(--accent-tint);
+  }
+
+  .tool-content {
+    max-width: var(--content-width);
+  }
+
+  .tool-content h2 {
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+  }
+
+  .tool-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--gray-900);
+  }
+
+  .tool-content ul {
+    margin: 0 0 1.5rem 1.5rem;
+  }
+
+  .related-links {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  .related-links a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 900px) {
+    .tool-layout,
+    .result-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

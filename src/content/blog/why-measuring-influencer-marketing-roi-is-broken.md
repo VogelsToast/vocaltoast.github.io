@@ -45,6 +45,8 @@ HDYHAU isn't perfect. People don't always remember exactly where they first hear
 
 We used HDYHAU not just at the individual level but to assess the programme as a whole. When we launched a batch of creator content in a given month, we'd watch for a lift in traffic and signups, and then cross-reference that against what was showing up in HDYHAU responses. We'd also track CAC per channel grouping and overall CAC month-on-month to get a sense of whether things were trending in the right direction.
 
+If you want to pressure-test that logic with your own numbers, I put together a simple [creator marketing ROI calculator](/tools/creator-marketing-roi-calculator/) that combines direct attributed customers with HDYHAU-driven assisted revenue.
+
 ## Smaller creators, bigger impact
 
 One of the most counterintuitive things we learned at Narrative was that bigger creators didn't necessarily drive more conversions. In fact, on the whole, smaller creators were more impactful.

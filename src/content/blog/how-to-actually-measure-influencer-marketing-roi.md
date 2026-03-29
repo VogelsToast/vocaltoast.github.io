@@ -7,6 +7,8 @@ tags: ["Influencer Marketing", "Marketing Measurement", "Creator Marketing", "RO
 
 I wrote recently about [why influencer marketing measurement is broken](/blog/why-measuring-influencer-marketing-roi-is-broken/). The short version: most companies track reach, impressions, and affiliate codes, then wonder why the numbers don't match the impact they can feel but can't prove. The attribution models we've inherited from performance marketing weren't built for how creator influence actually works.
 
+If you want a practical starting point alongside this framework, I also built a [creator marketing ROI calculator](/tools/creator-marketing-roi-calculator/) that models direct revenue, HDYHAU-influenced signups, and blended CAC together.
+
 But identifying the problem is the easy part. The harder question is: what should you actually measure instead? And the answer, frustratingly, is that it depends on what you're trying to achieve.
 
 That might sound like a cop-out. It isn't. It's the single most important insight I've picked up from running creator programmes across multiple companies. The reason so many teams struggle with influencer ROI isn't that they're measuring badly. It's that they're measuring the wrong things for the goal they're actually pursuing. A brand awareness campaign and a direct acquisition campaign require completely different measurement approaches. Treating them the same is where everything falls apart.
