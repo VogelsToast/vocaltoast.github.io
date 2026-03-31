@@ -1,6 +1,7 @@
 ---
 const { variant = 'default' } = Astro.props;
-const beehiivFormUrl = 'https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b068-9cae541012be';
+const kitFormUid = '41974a9f46';
+const kitEmbedScriptUrl = 'https://zac-culpan.kit.com/41974a9f46/index.js';
 ---
 
 <div class={`email-signup email-signup--${variant}`}>
@@ -22,20 +23,10 @@ const beehiivFormUrl = 'https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b
         </p>
       </>
     )}
-    <div class="email-signup-actions">
-      <a
-        href={beehiivFormUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="email-signup-btn"
-        aria-label="Subscribe on Beehiiv (opens in new tab)"
-      >
-        Subscribe <span class="arrow" aria-hidden="true">→</span>
-      </a>
+    <div class="email-signup-form-wrap">
+      <script is:inline async data-uid={kitFormUid} src={kitEmbedScriptUrl}></script>
     </div>
-    <p class="email-signup-note">
-      Opens the hosted Beehiiv signup form in a new tab.
-    </p>
+    <p class="email-signup-note">No spam. Unsubscribe anytime.</p>
   </div>
 </div>
 
@@ -92,46 +83,126 @@ const beehiivFormUrl = 'https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b
     max-width: 520px;
   }
 
-  .email-signup-actions {
-    display: flex;
-  }
-
-  .email-signup-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.85rem 1.75rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: var(--font-sans);
-    background: var(--black);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
-    white-space: nowrap;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
-
-  .email-signup-btn:hover {
-    background: var(--accent-light);
+  .email-signup-form-wrap {
+    max-width: 600px;
   }
 
   .email-signup-note {
     font-size: 0.75rem;
     color: var(--gray-500);
-    margin-top: 0.75rem;
+    margin-top: 0.6rem;
   }
 
-  .email-signup-btn:hover .arrow {
-    transform: translateX(4px);
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46']) {
+    max-width: 600px !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
-  .email-signup-btn .arrow {
-    display: inline-block;
-    transition: transform 0.25s ease;
-    text-underline-offset: 0.12em;
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] > div[data-style='full']) {
+    display: block !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-column:first-child),
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-guarantee),
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-background) {
+    display: none !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-column:last-child) {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-alert) {
+    list-style: none !important;
+    margin: 0 0 0.85rem !important;
+    padding: 0 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-alert-success) {
+    color: var(--accent) !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-alert-error) {
+    color: #b42318 !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-fields) {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 0.75rem !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-field) {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-input) {
+    width: 100% !important;
+    min-height: 56px !important;
+    padding: 1rem 1.25rem !important;
+    font-size: 1.02rem !important;
+    line-height: 1.2 !important;
+    font-family: var(--font-sans) !important;
+    border: 2px solid var(--gray-200) !important;
+    border-radius: 0 !important;
+    background: var(--white) !important;
+    color: var(--black) !important;
+    box-shadow: none !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-input::placeholder) {
+    color: var(--gray-500) !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-input:focus) {
+    border-color: var(--accent) !important;
+    outline: none !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-submit) {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    width: auto !important;
+    min-width: 180px !important;
+    min-height: 56px !important;
+    padding: 0 1.5rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    font-family: var(--font-sans) !important;
+    background: var(--black) !important;
+    color: var(--white) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+    transition: background 0.2s !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-submit:hover) {
+    background: var(--accent-light) !important;
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-submit span::after) {
+    content: ' →';
+  }
+
+  .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-submit span) {
+    white-space: nowrap !important;
   }
 
   @media (max-width: 640px) {
@@ -147,13 +218,13 @@ const beehiivFormUrl = 'https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b
       padding: 0 1.25rem;
     }
 
-    .email-signup-actions {
-      display: block;
+    .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-fields) {
+      flex-direction: column !important;
     }
 
-    .email-signup-btn {
-      width: 100%;
-      justify-content: center;
+    .email-signup-inner :global(.formkit-form[data-uid='41974a9f46'] .formkit-submit) {
+      width: 100% !important;
+      min-width: 0 !important;
     }
   }
 </style>
