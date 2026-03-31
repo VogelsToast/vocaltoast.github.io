@@ -1,64 +1,43 @@
 ---
 const { variant = 'default' } = Astro.props;
-// variant: 'default' (standalone section), 'post-end' (after blog posts)
-const formId = `beehiiv-${Math.random().toString(36).slice(2, 8)}`;
+const beehiivFormUrl = 'https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b068-9cae541012be';
 ---
 
 <div class={`email-signup email-signup--${variant}`}>
   <div class="email-signup-inner">
     {variant === 'post-end' ? (
-      <p class="email-signup-eyebrow">Stay in the loop</p>
-      <h3 class="email-signup-heading">Get new posts straight to your inbox</h3>
-      <p class="email-signup-text">
-        I write about ecosystem marketing, creator-led growth, and what actually works in SaaS. No spam, no fluff — just the stuff I wish someone had told me earlier.
-      </p>
+      <>
+        <p class="email-signup-eyebrow">Stay in the loop</p>
+        <h3 class="email-signup-heading">Get new posts straight to your inbox</h3>
+        <p class="email-signup-text">
+          I write about ecosystem marketing, creator-led growth, and what actually works in SaaS. No spam, no fluff, just the stuff I wish someone had told me earlier.
+        </p>
+      </>
     ) : (
-      <p class="email-signup-eyebrow">Newsletter</p>
-      <h3 class="email-signup-heading">Ideas on growth that actually stick</h3>
-      <p class="email-signup-text">
-        One email when I publish something new. Ecosystem marketing, creator strategies, and the thinking behind SaaS growth — from someone who's built it, not just studied it.
-      </p>
+      <>
+        <p class="email-signup-eyebrow">Newsletter</p>
+        <h3 class="email-signup-heading">Ideas on growth that actually stick</h3>
+        <p class="email-signup-text">
+          One email when I publish something new. Ecosystem marketing, creator strategies, and the thinking behind SaaS growth, from someone who&apos;s built it, not just studied it.
+        </p>
+      </>
     )}
-    <iframe name={formId} style="display:none;" aria-hidden="true"></iframe>
-    <form
-      class="email-signup-form"
-      action="https://subscribe-forms.beehiiv.com/c6aa4383-73db-44bb-b068-9cae541012be"
-      method="POST"
-      target={formId}
-      data-beehiiv-subscribe
-    >
-      <div class="email-signup-row">
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email address"
-          required
-          class="email-signup-input"
-          aria-label="Email address"
-        />
-        <button type="submit" class="email-signup-btn">Subscribe <span class="arrow" aria-hidden="true">→</span></button>
-      </div>
-      <p class="email-signup-note">No spam. Unsubscribe anytime.</p>
-      <p class="email-signup-success" style="display:none;">You're in — check your inbox.</p>
-    </form>
+    <div class="email-signup-actions">
+      <a
+        href={beehiivFormUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="email-signup-btn"
+        aria-label="Subscribe on Beehiiv (opens in new tab)"
+      >
+        Subscribe <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <p class="email-signup-note">
+      Opens the hosted Beehiiv signup form in a new tab.
+    </p>
   </div>
 </div>
-
-<script>
-  document.querySelectorAll('[data-beehiiv-subscribe]').forEach(form => {
-    form.addEventListener('submit', () => {
-      const row = form.querySelector('.email-signup-row');
-      const note = form.querySelector('.email-signup-note');
-      const success = form.querySelector('.email-signup-success');
-      // Short delay to let the form submit, then show success
-      setTimeout(() => {
-        row.style.display = 'none';
-        note.style.display = 'none';
-        success.style.display = 'block';
-      }, 500);
-    });
-  });
-</script>
 
 <style>
   .email-signup {
@@ -110,33 +89,11 @@ const formId = `beehiiv-${Math.random().toString(36).slice(2, 8)}`;
     color: var(--gray-600);
     line-height: 1.75;
     margin-bottom: 1.5rem;
-    max-width: 480px;
-  }
-
-  .email-signup-row {
-    display: flex;
-    gap: 0.75rem;
     max-width: 520px;
   }
 
-  .email-signup-input {
-    flex: 1;
-    padding: 0.85rem 1.25rem;
-    font-size: 1rem;
-    font-family: var(--font-sans);
-    border: 2px solid var(--gray-200);
-    background: var(--white);
-    color: var(--black);
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  .email-signup-input:focus {
-    border-color: var(--accent);
-  }
-
-  .email-signup-input::placeholder {
-    color: var(--gray-500);
+  .email-signup-actions {
+    display: flex;
   }
 
   .email-signup-btn {
@@ -154,10 +111,17 @@ const formId = `beehiiv-${Math.random().toString(36).slice(2, 8)}`;
     transition: background 0.2s;
     white-space: nowrap;
     letter-spacing: 0.02em;
+    text-decoration: none;
   }
 
   .email-signup-btn:hover {
     background: var(--accent-light);
+  }
+
+  .email-signup-note {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-top: 0.75rem;
   }
 
   .email-signup-btn:hover .arrow {
@@ -167,28 +131,29 @@ const formId = `beehiiv-${Math.random().toString(36).slice(2, 8)}`;
   .email-signup-btn .arrow {
     display: inline-block;
     transition: transform 0.25s ease;
+    text-underline-offset: 0.12em;
   }
 
-  .email-signup-note {
-    font-size: 0.75rem;
-    color: var(--gray-500);
-    margin-top: 0.6rem;
-  }
+  @media (max-width: 640px) {
+    .email-signup--default {
+      padding: 3rem 0;
+    }
 
-  .email-signup-success {
-    font-size: 0.9rem;
-    color: var(--accent);
-    font-weight: 500;
-    margin-top: 0.5rem;
-  }
+    .email-signup--post-end {
+      padding: 1.5rem;
+    }
 
-  @media (max-width: 480px) {
-    .email-signup-row {
-      flex-direction: column;
+    .email-signup--default .email-signup-inner {
+      padding: 0 1.25rem;
+    }
+
+    .email-signup-actions {
+      display: block;
     }
 
     .email-signup-btn {
       width: 100%;
+      justify-content: center;
     }
   }
 </style>
